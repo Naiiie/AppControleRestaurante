@@ -42,5 +42,10 @@ namespace AppControleRestaurante
         {
 
         }
+
+        private void PgnInicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

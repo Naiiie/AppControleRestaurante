@@ -73,6 +73,9 @@
     <EmbeddedResource Include="PgnLoginEmpresa.resx">
       <DependentUpon>PgnLoginEmpresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PgnLoginExterno.resx">
+      <DependentUpon>PgnLoginExterno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

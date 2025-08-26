@@ -28,57 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxbNomeEmpresa = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnLoginEmpresa));
+            this.TxbNome = new System.Windows.Forms.TextBox();
             this.TxbCNPJ = new System.Windows.Forms.TextBox();
             this.TxbEmail = new System.Windows.Forms.TextBox();
-            this.TxbNumero = new System.Windows.Forms.TextBox();
+            this.TxbContato = new System.Windows.Forms.TextBox();
             this.LblNomeEmpresa = new System.Windows.Forms.Label();
             this.LblCNPJ = new System.Windows.Forms.Label();
             this.LblEmail = new System.Windows.Forms.Label();
             this.LblNumero = new System.Windows.Forms.Label();
-            this.LblGuiaLogin = new System.Windows.Forms.Label();
             this.CmbTamEmprsa = new System.Windows.Forms.ComboBox();
             this.LblTamEmpresa = new System.Windows.Forms.Label();
-            this.LblLogEmpresa = new System.Windows.Forms.Label();
             this.LblUserEmpresa = new System.Windows.Forms.Label();
             this.TxbUsuario = new System.Windows.Forms.TextBox();
             this.LblSenha = new System.Windows.Forms.Label();
             this.TxbSenha = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnEntrar = new System.Windows.Forms.Button();
+            this.BtnGeradorID1 = new System.Windows.Forms.Button();
+            this.txbIDgerado = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // TxbNomeEmpresa
+            // TxbNome
             // 
-            this.TxbNomeEmpresa.Location = new System.Drawing.Point(60, 116);
-            this.TxbNomeEmpresa.Name = "TxbNomeEmpresa";
-            this.TxbNomeEmpresa.Size = new System.Drawing.Size(246, 20);
-            this.TxbNomeEmpresa.TabIndex = 0;
+            this.TxbNome.Location = new System.Drawing.Point(47, 115);
+            this.TxbNome.Name = "TxbNome";
+            this.TxbNome.Size = new System.Drawing.Size(246, 20);
+            this.TxbNome.TabIndex = 0;
             // 
             // TxbCNPJ
             // 
-            this.TxbCNPJ.Location = new System.Drawing.Point(60, 182);
+            this.TxbCNPJ.Location = new System.Drawing.Point(47, 165);
             this.TxbCNPJ.Name = "TxbCNPJ";
             this.TxbCNPJ.Size = new System.Drawing.Size(246, 20);
             this.TxbCNPJ.TabIndex = 1;
             // 
             // TxbEmail
             // 
-            this.TxbEmail.Location = new System.Drawing.Point(60, 252);
+            this.TxbEmail.Location = new System.Drawing.Point(47, 217);
             this.TxbEmail.Name = "TxbEmail";
             this.TxbEmail.Size = new System.Drawing.Size(246, 20);
             this.TxbEmail.TabIndex = 2;
             // 
-            // TxbNumero
+            // TxbContato
             // 
-            this.TxbNumero.Location = new System.Drawing.Point(60, 317);
-            this.TxbNumero.Name = "TxbNumero";
-            this.TxbNumero.Size = new System.Drawing.Size(246, 20);
-            this.TxbNumero.TabIndex = 3;
+            this.TxbContato.Location = new System.Drawing.Point(49, 271);
+            this.TxbContato.Name = "TxbContato";
+            this.TxbContato.Size = new System.Drawing.Size(246, 20);
+            this.TxbContato.TabIndex = 3;
             // 
             // LblNomeEmpresa
             // 
             this.LblNomeEmpresa.AutoSize = true;
-            this.LblNomeEmpresa.Location = new System.Drawing.Point(57, 77);
+            this.LblNomeEmpresa.Location = new System.Drawing.Point(44, 99);
             this.LblNomeEmpresa.Name = "LblNomeEmpresa";
             this.LblNomeEmpresa.Size = new System.Drawing.Size(35, 13);
             this.LblNomeEmpresa.TabIndex = 4;
@@ -87,7 +91,7 @@
             // LblCNPJ
             // 
             this.LblCNPJ.AutoSize = true;
-            this.LblCNPJ.Location = new System.Drawing.Point(57, 155);
+            this.LblCNPJ.Location = new System.Drawing.Point(46, 149);
             this.LblCNPJ.Name = "LblCNPJ";
             this.LblCNPJ.Size = new System.Drawing.Size(34, 13);
             this.LblCNPJ.TabIndex = 5;
@@ -96,7 +100,7 @@
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(57, 226);
+            this.LblEmail.Location = new System.Drawing.Point(44, 201);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(35, 13);
             this.LblEmail.TabIndex = 6;
@@ -105,20 +109,11 @@
             // LblNumero
             // 
             this.LblNumero.AutoSize = true;
-            this.LblNumero.Location = new System.Drawing.Point(57, 292);
+            this.LblNumero.Location = new System.Drawing.Point(44, 249);
             this.LblNumero.Name = "LblNumero";
             this.LblNumero.Size = new System.Drawing.Size(44, 13);
             this.LblNumero.TabIndex = 7;
             this.LblNumero.Text = "Numero";
-            // 
-            // LblGuiaLogin
-            // 
-            this.LblGuiaLogin.AutoSize = true;
-            this.LblGuiaLogin.Location = new System.Drawing.Point(57, 25);
-            this.LblGuiaLogin.Name = "LblGuiaLogin";
-            this.LblGuiaLogin.Size = new System.Drawing.Size(385, 13);
-            this.LblGuiaLogin.TabIndex = 8;
-            this.LblGuiaLogin.Text = "Informe seus dados para criar uma conta ou faça Login em uma conta existente.";
             // 
             // CmbTamEmprsa
             // 
@@ -128,7 +123,7 @@
             "(2)-Pequena Empresa",
             "(3)-Média Empresa",
             "(4)- Grande Empresa"});
-            this.CmbTamEmprsa.Location = new System.Drawing.Point(60, 397);
+            this.CmbTamEmprsa.Location = new System.Drawing.Point(47, 331);
             this.CmbTamEmprsa.Name = "CmbTamEmprsa";
             this.CmbTamEmprsa.Size = new System.Drawing.Size(246, 21);
             this.CmbTamEmprsa.TabIndex = 13;
@@ -136,25 +131,16 @@
             // LblTamEmpresa
             // 
             this.LblTamEmpresa.AutoSize = true;
-            this.LblTamEmpresa.Location = new System.Drawing.Point(57, 366);
+            this.LblTamEmpresa.Location = new System.Drawing.Point(44, 305);
             this.LblTamEmpresa.Name = "LblTamEmpresa";
             this.LblTamEmpresa.Size = new System.Drawing.Size(165, 13);
             this.LblTamEmpresa.TabIndex = 14;
             this.LblTamEmpresa.Text = "Selecione o tamanho da empresa";
             // 
-            // LblLogEmpresa
-            // 
-            this.LblLogEmpresa.AutoSize = true;
-            this.LblLogEmpresa.Location = new System.Drawing.Point(475, 110);
-            this.LblLogEmpresa.Name = "LblLogEmpresa";
-            this.LblLogEmpresa.Size = new System.Drawing.Size(153, 26);
-            this.LblLogEmpresa.TabIndex = 15;
-            this.LblLogEmpresa.Text = "Já tem uma conta? \r\nFaça seu login para começar!!!";
-            // 
             // LblUserEmpresa
             // 
             this.LblUserEmpresa.AutoSize = true;
-            this.LblUserEmpresa.Location = new System.Drawing.Point(475, 155);
+            this.LblUserEmpresa.Location = new System.Drawing.Point(453, 163);
             this.LblUserEmpresa.Name = "LblUserEmpresa";
             this.LblUserEmpresa.Size = new System.Drawing.Size(56, 13);
             this.LblUserEmpresa.TabIndex = 16;
@@ -162,7 +148,7 @@
             // 
             // TxbUsuario
             // 
-            this.TxbUsuario.Location = new System.Drawing.Point(469, 171);
+            this.TxbUsuario.Location = new System.Drawing.Point(456, 194);
             this.TxbUsuario.Name = "TxbUsuario";
             this.TxbUsuario.Size = new System.Drawing.Size(246, 20);
             this.TxbUsuario.TabIndex = 17;
@@ -170,7 +156,7 @@
             // LblSenha
             // 
             this.LblSenha.AutoSize = true;
-            this.LblSenha.Location = new System.Drawing.Point(475, 226);
+            this.LblSenha.Location = new System.Drawing.Point(453, 271);
             this.LblSenha.Name = "LblSenha";
             this.LblSenha.Size = new System.Drawing.Size(44, 13);
             this.LblSenha.TabIndex = 18;
@@ -178,14 +164,14 @@
             // 
             // TxbSenha
             // 
-            this.TxbSenha.Location = new System.Drawing.Point(469, 252);
+            this.TxbSenha.Location = new System.Drawing.Point(456, 298);
             this.TxbSenha.Name = "TxbSenha";
             this.TxbSenha.Size = new System.Drawing.Size(246, 20);
             this.TxbSenha.TabIndex = 19;
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(456, 388);
+            this.BtnSalvar.Location = new System.Drawing.Point(300, 415);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 20;
@@ -193,30 +179,69 @@
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(803, 453);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BtnEntrar
+            // 
+            this.BtnEntrar.Location = new System.Drawing.Point(627, 388);
+            this.BtnEntrar.Name = "BtnEntrar";
+            this.BtnEntrar.Size = new System.Drawing.Size(75, 23);
+            this.BtnEntrar.TabIndex = 22;
+            this.BtnEntrar.Text = "ENTRAR";
+            this.BtnEntrar.UseVisualStyleBackColor = true;
+            // 
+            // BtnGeradorID1
+            // 
+            this.BtnGeradorID1.Location = new System.Drawing.Point(53, 374);
+            this.BtnGeradorID1.Name = "BtnGeradorID1";
+            this.BtnGeradorID1.Size = new System.Drawing.Size(156, 23);
+            this.BtnGeradorID1.TabIndex = 23;
+            this.BtnGeradorID1.Text = "Gerar ID para Empresa";
+            this.BtnGeradorID1.UseVisualStyleBackColor = true;
+            this.BtnGeradorID1.Click += new System.EventHandler(this.btnGeradorID1_Click);
+            // 
+            // txbIDgerado
+            // 
+            this.txbIDgerado.Location = new System.Drawing.Point(53, 403);
+            this.txbIDgerado.Name = "txbIDgerado";
+            this.txbIDgerado.Size = new System.Drawing.Size(156, 20);
+            this.txbIDgerado.TabIndex = 24;
+            // 
             // PgnLoginEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txbIDgerado);
+            this.Controls.Add(this.BtnGeradorID1);
+            this.Controls.Add(this.BtnEntrar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxbSenha);
             this.Controls.Add(this.LblSenha);
             this.Controls.Add(this.TxbUsuario);
             this.Controls.Add(this.LblUserEmpresa);
-            this.Controls.Add(this.LblLogEmpresa);
             this.Controls.Add(this.LblTamEmpresa);
             this.Controls.Add(this.CmbTamEmprsa);
-            this.Controls.Add(this.LblGuiaLogin);
             this.Controls.Add(this.LblNumero);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.LblCNPJ);
             this.Controls.Add(this.LblNomeEmpresa);
-            this.Controls.Add(this.TxbNumero);
+            this.Controls.Add(this.TxbContato);
             this.Controls.Add(this.TxbEmail);
             this.Controls.Add(this.TxbCNPJ);
-            this.Controls.Add(this.TxbNomeEmpresa);
+            this.Controls.Add(this.TxbNome);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "PgnLoginEmpresa";
             this.Text = "PgnLoginEmpresa";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,22 +249,24 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxbNomeEmpresa;
+        private System.Windows.Forms.TextBox TxbNome;
         private System.Windows.Forms.TextBox TxbCNPJ;
         private System.Windows.Forms.TextBox TxbEmail;
-        private System.Windows.Forms.TextBox TxbNumero;
+        private System.Windows.Forms.TextBox TxbContato;
         private System.Windows.Forms.Label LblNomeEmpresa;
         private System.Windows.Forms.Label LblCNPJ;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.Label LblNumero;
-        private System.Windows.Forms.Label LblGuiaLogin;
         private System.Windows.Forms.ComboBox CmbTamEmprsa;
         private System.Windows.Forms.Label LblTamEmpresa;
-        private System.Windows.Forms.Label LblLogEmpresa;
         private System.Windows.Forms.Label LblUserEmpresa;
         private System.Windows.Forms.TextBox TxbUsuario;
         private System.Windows.Forms.Label LblSenha;
         private System.Windows.Forms.TextBox TxbSenha;
         private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnEntrar;
+        private System.Windows.Forms.Button BtnGeradorID1;
+        private System.Windows.Forms.TextBox txbIDgerado;
     }
 }
