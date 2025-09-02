@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadCatalogo.Designer.cs">
+      <DependentUpon>CadCatalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgnInicioEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgnInicioEmpresa.Designer.cs">
+      <DependentUpon>PgnInicioEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgnInicioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgnInicioExterno.Designer.cs">
+      <DependentUpon>PgnInicioExterno.cs</DependentUpon>
     </Compile>
     <Compile Include="PgnLoginEmpresa.cs">
       <SubType>Form</SubType>
@@ -69,6 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgnInicioEmpresa.resx">
+      <DependentUpon>PgnInicioEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgnInicioExterno.resx">
+      <DependentUpon>PgnInicioExterno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PgnLoginEmpresa.resx">
       <DependentUpon>PgnLoginEmpresa.cs</DependentUpon>

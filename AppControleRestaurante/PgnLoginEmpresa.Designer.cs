@@ -44,11 +44,9 @@
             this.LblSenha = new System.Windows.Forms.Label();
             this.TxbSenha = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureLog1 = new System.Windows.Forms.PictureBox();
             this.BtnEntrar = new System.Windows.Forms.Button();
-            this.BtnGeradorID1 = new System.Windows.Forms.Button();
-            this.txbIDgerado = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // TxbNome
@@ -57,6 +55,7 @@
             this.TxbNome.Name = "TxbNome";
             this.TxbNome.Size = new System.Drawing.Size(246, 20);
             this.TxbNome.TabIndex = 0;
+            this.TxbNome.TextChanged += new System.EventHandler(this.TxbNome_TextChanged);
             // 
             // TxbCNPJ
             // 
@@ -179,15 +178,15 @@
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // pictureBox1
+            // pictureLog1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(803, 453);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.pictureLog1.Image = ((System.Drawing.Image)(resources.GetObject("pictureLog1.Image")));
+            this.pictureLog1.Location = new System.Drawing.Point(0, -2);
+            this.pictureLog1.Name = "pictureLog1";
+            this.pictureLog1.Size = new System.Drawing.Size(803, 453);
+            this.pictureLog1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLog1.TabIndex = 21;
+            this.pictureLog1.TabStop = false;
             // 
             // BtnEntrar
             // 
@@ -198,30 +197,11 @@
             this.BtnEntrar.Text = "ENTRAR";
             this.BtnEntrar.UseVisualStyleBackColor = true;
             // 
-            // BtnGeradorID1
-            // 
-            this.BtnGeradorID1.Location = new System.Drawing.Point(53, 374);
-            this.BtnGeradorID1.Name = "BtnGeradorID1";
-            this.BtnGeradorID1.Size = new System.Drawing.Size(156, 23);
-            this.BtnGeradorID1.TabIndex = 23;
-            this.BtnGeradorID1.Text = "Gerar ID para Empresa";
-            this.BtnGeradorID1.UseVisualStyleBackColor = true;
-            this.BtnGeradorID1.Click += new System.EventHandler(this.btnGeradorID1_Click);
-            // 
-            // txbIDgerado
-            // 
-            this.txbIDgerado.Location = new System.Drawing.Point(53, 403);
-            this.txbIDgerado.Name = "txbIDgerado";
-            this.txbIDgerado.Size = new System.Drawing.Size(156, 20);
-            this.txbIDgerado.TabIndex = 24;
-            // 
             // PgnLoginEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txbIDgerado);
-            this.Controls.Add(this.BtnGeradorID1);
             this.Controls.Add(this.BtnEntrar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxbSenha);
@@ -238,10 +218,10 @@
             this.Controls.Add(this.TxbEmail);
             this.Controls.Add(this.TxbCNPJ);
             this.Controls.Add(this.TxbNome);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureLog1);
             this.Name = "PgnLoginEmpresa";
             this.Text = "PgnLoginEmpresa";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLog1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,9 +244,7 @@
         private System.Windows.Forms.Label LblSenha;
         private System.Windows.Forms.TextBox TxbSenha;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureLog1;
         private System.Windows.Forms.Button BtnEntrar;
-        private System.Windows.Forms.Button BtnGeradorID1;
-        private System.Windows.Forms.TextBox txbIDgerado;
     }
 }
