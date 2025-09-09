@@ -34,6 +34,7 @@
             this.BtnCadExterno = new System.Windows.Forms.Button();
             this.LblCadEmpresa = new System.Windows.Forms.Label();
             this.LblCadExterno = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PgnImagemInicio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             // BtnCadExterno
             // 
-            this.BtnCadExterno.Location = new System.Drawing.Point(470, 183);
+            this.BtnCadExterno.Location = new System.Drawing.Point(354, 183);
             this.BtnCadExterno.Name = "BtnCadExterno";
             this.BtnCadExterno.Size = new System.Drawing.Size(199, 46);
             this.BtnCadExterno.TabIndex = 2;
@@ -81,17 +82,28 @@
             // LblCadExterno
             // 
             this.LblCadExterno.AutoSize = true;
-            this.LblCadExterno.Location = new System.Drawing.Point(467, 246);
+            this.LblCadExterno.Location = new System.Drawing.Point(351, 246);
             this.LblCadExterno.Name = "LblCadExterno";
             this.LblCadExterno.Size = new System.Drawing.Size(249, 26);
             this.LblCadExterno.TabIndex = 6;
             this.LblCadExterno.Text = "Cadastre ou faça login como funcionario e participe\r\n ativamente  em sua empresa";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(585, 380);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(175, 50);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "Ir para o login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // PgnInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.LblCadExterno);
             this.Controls.Add(this.LblCadEmpresa);
             this.Controls.Add(this.BtnCadExterno);
@@ -113,6 +125,7 @@
         private System.Windows.Forms.Button BtnCadExterno;
         private System.Windows.Forms.Label LblCadEmpresa;
         private System.Windows.Forms.Label LblCadExterno;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

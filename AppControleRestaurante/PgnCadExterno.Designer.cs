@@ -1,6 +1,6 @@
 ﻿namespace AppControleRestaurante
 {
-    partial class PgnLoginExterno
+    partial class PgnCadExterno
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnLoginExterno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnCadExterno));
             this.pictureLog2 = new System.Windows.Forms.PictureBox();
-            this.BtnEntrar2 = new System.Windows.Forms.Button();
             this.lblBusqueEmpresa = new System.Windows.Forms.Label();
             this.lblUsuario2 = new System.Windows.Forms.Label();
             this.lblSenha2 = new System.Windows.Forms.Label();
@@ -55,19 +54,10 @@
             this.pictureLog2.TabIndex = 0;
             this.pictureLog2.TabStop = false;
             // 
-            // BtnEntrar2
-            // 
-            this.BtnEntrar2.Location = new System.Drawing.Point(646, 392);
-            this.BtnEntrar2.Name = "BtnEntrar2";
-            this.BtnEntrar2.Size = new System.Drawing.Size(75, 23);
-            this.BtnEntrar2.TabIndex = 1;
-            this.BtnEntrar2.Text = "ENTRAR";
-            this.BtnEntrar2.UseVisualStyleBackColor = true;
-            // 
             // lblBusqueEmpresa
             // 
             this.lblBusqueEmpresa.AutoSize = true;
-            this.lblBusqueEmpresa.Location = new System.Drawing.Point(38, 289);
+            this.lblBusqueEmpresa.Location = new System.Drawing.Point(41, 277);
             this.lblBusqueEmpresa.Name = "lblBusqueEmpresa";
             this.lblBusqueEmpresa.Size = new System.Drawing.Size(129, 13);
             this.lblBusqueEmpresa.TabIndex = 3;
@@ -86,7 +76,7 @@
             // lblSenha2
             // 
             this.lblSenha2.AutoSize = true;
-            this.lblSenha2.Location = new System.Drawing.Point(481, 267);
+            this.lblSenha2.Location = new System.Drawing.Point(481, 221);
             this.lblSenha2.Name = "lblSenha2";
             this.lblSenha2.Size = new System.Drawing.Size(44, 13);
             this.lblSenha2.TabIndex = 6;
@@ -101,7 +91,7 @@
             // 
             // txbSenha2
             // 
-            this.txbSenha2.Location = new System.Drawing.Point(484, 317);
+            this.txbSenha2.Location = new System.Drawing.Point(484, 277);
             this.txbSenha2.Name = "txbSenha2";
             this.txbSenha2.Size = new System.Drawing.Size(100, 20);
             this.txbSenha2.TabIndex = 8;
@@ -109,7 +99,7 @@
             // lblNomeEx
             // 
             this.lblNomeEx.AutoSize = true;
-            this.lblNomeEx.Location = new System.Drawing.Point(38, 130);
+            this.lblNomeEx.Location = new System.Drawing.Point(35, 112);
             this.lblNomeEx.Name = "lblNomeEx";
             this.lblNomeEx.Size = new System.Drawing.Size(38, 13);
             this.lblNomeEx.TabIndex = 9;
@@ -117,14 +107,14 @@
             // 
             // txbNomeFuncionario
             // 
-            this.txbNomeFuncionario.Location = new System.Drawing.Point(41, 153);
+            this.txbNomeFuncionario.Location = new System.Drawing.Point(44, 128);
             this.txbNomeFuncionario.Name = "txbNomeFuncionario";
             this.txbNomeFuncionario.Size = new System.Drawing.Size(201, 20);
             this.txbNomeFuncionario.TabIndex = 10;
             // 
             // txbID
             // 
-            this.txbID.Location = new System.Drawing.Point(41, 305);
+            this.txbID.Location = new System.Drawing.Point(44, 319);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(154, 20);
             this.txbID.TabIndex = 11;
@@ -133,18 +123,18 @@
             // 
             // btnSalvar2
             // 
-            this.btnSalvar2.Location = new System.Drawing.Point(243, 363);
+            this.btnSalvar2.Location = new System.Drawing.Point(580, 364);
             this.btnSalvar2.Name = "btnSalvar2";
-            this.btnSalvar2.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar2.Size = new System.Drawing.Size(119, 23);
             this.btnSalvar2.TabIndex = 12;
-            this.btnSalvar2.Text = "SALVAR";
+            this.btnSalvar2.Text = "SALVAR E ENTRAR";
             this.btnSalvar2.UseVisualStyleBackColor = true;
             this.btnSalvar2.Click += new System.EventHandler(this.btnSalvar2_Click);
             // 
             // lblEmailFuncionario
             // 
             this.lblEmailFuncionario.AutoSize = true;
-            this.lblEmailFuncionario.Location = new System.Drawing.Point(41, 206);
+            this.lblEmailFuncionario.Location = new System.Drawing.Point(35, 182);
             this.lblEmailFuncionario.Name = "lblEmailFuncionario";
             this.lblEmailFuncionario.Size = new System.Drawing.Size(32, 13);
             this.lblEmailFuncionario.TabIndex = 13;
@@ -152,7 +142,7 @@
             // 
             // txbEmailFuncionario
             // 
-            this.txbEmailFuncionario.Location = new System.Drawing.Point(41, 222);
+            this.txbEmailFuncionario.Location = new System.Drawing.Point(44, 214);
             this.txbEmailFuncionario.Name = "txbEmailFuncionario";
             this.txbEmailFuncionario.Size = new System.Drawing.Size(201, 20);
             this.txbEmailFuncionario.TabIndex = 14;
@@ -173,7 +163,6 @@
             this.Controls.Add(this.lblSenha2);
             this.Controls.Add(this.lblUsuario2);
             this.Controls.Add(this.lblBusqueEmpresa);
-            this.Controls.Add(this.BtnEntrar2);
             this.Controls.Add(this.pictureLog2);
             this.Name = "PgnLoginExterno";
             this.Text = "PgnLoginExterno";
@@ -186,7 +175,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureLog2;
-        private System.Windows.Forms.Button BtnEntrar2;
         private System.Windows.Forms.Label lblBusqueEmpresa;
         private System.Windows.Forms.Label lblUsuario2;
         private System.Windows.Forms.Label lblSenha2;

@@ -19,7 +19,7 @@ namespace AppControleRestaurante
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PgnLoginExterno product = new PgnLoginExterno();
+            PgnCadExterno product = new PgnCadExterno();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
@@ -32,7 +32,7 @@ namespace AppControleRestaurante
 
         private void BtnCadEmpresa_Click(object sender, EventArgs e)
         {
-            PgnLoginEmpresa product = new PgnLoginEmpresa();
+            PgnCadEmpresa product = new PgnCadEmpresa();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
@@ -46,6 +46,14 @@ namespace AppControleRestaurante
         private void PgnInicial_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            PgnLogin product = new PgnLogin();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
         }
     }
 }

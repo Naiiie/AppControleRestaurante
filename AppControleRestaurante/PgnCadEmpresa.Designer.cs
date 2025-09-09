@@ -1,6 +1,6 @@
 ﻿namespace AppControleRestaurante
 {
-    partial class PgnLoginEmpresa
+    partial class PgnCadEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnLoginEmpresa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnCadEmpresa));
             this.TxbNome = new System.Windows.Forms.TextBox();
             this.TxbCNPJ = new System.Windows.Forms.TextBox();
             this.TxbEmail = new System.Windows.Forms.TextBox();
@@ -45,7 +45,6 @@
             this.TxbSenha = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.pictureLog1 = new System.Windows.Forms.PictureBox();
-            this.BtnEntrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLog1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,14 +166,16 @@
             this.TxbSenha.Name = "TxbSenha";
             this.TxbSenha.Size = new System.Drawing.Size(246, 20);
             this.TxbSenha.TabIndex = 19;
+            this.TxbSenha.UseSystemPasswordChar = true;
+            this.TxbSenha.TextChanged += new System.EventHandler(this.TxbSenha_TextChanged);
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(300, 415);
+            this.BtnSalvar.Location = new System.Drawing.Point(592, 367);
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.Size = new System.Drawing.Size(131, 23);
             this.BtnSalvar.TabIndex = 20;
-            this.BtnSalvar.Text = "SALVAR";
+            this.BtnSalvar.Text = "SALVAR e ENTRAR";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
@@ -188,21 +189,11 @@
             this.pictureLog1.TabIndex = 21;
             this.pictureLog1.TabStop = false;
             // 
-            // BtnEntrar
-            // 
-            this.BtnEntrar.Location = new System.Drawing.Point(627, 388);
-            this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.BtnEntrar.TabIndex = 22;
-            this.BtnEntrar.Text = "ENTRAR";
-            this.BtnEntrar.UseVisualStyleBackColor = true;
-            // 
             // PgnLoginEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnEntrar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxbSenha);
             this.Controls.Add(this.LblSenha);
@@ -245,6 +236,5 @@
         private System.Windows.Forms.TextBox TxbSenha;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.PictureBox pictureLog1;
-        private System.Windows.Forms.Button BtnEntrar;
     }
 }
