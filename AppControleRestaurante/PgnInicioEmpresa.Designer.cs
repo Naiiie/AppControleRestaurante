@@ -53,16 +53,16 @@
             this.splitter1.Cursor = System.Windows.Forms.Cursors.PanEast;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(66, 450);
+            this.splitter1.Size = new System.Drawing.Size(47, 450);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(66, 0);
+            this.splitter2.Location = new System.Drawing.Point(47, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 450);
+            this.splitter2.Size = new System.Drawing.Size(10, 450);
             this.splitter2.TabIndex = 2;
             this.splitter2.TabStop = false;
             // 
