@@ -34,48 +34,68 @@ namespace AppControleRestaurante
                 conn.Open();
 
                 // 1. Verifica usuário master (empresa)
-                string sql = "SELECT ID_Empresa FROM Empresas WHERE Usuario=@Usuario AND Senha=@Senha";
+                string sql = "SELECT ID_Empresa, Nome FROM Empresas WHERE Usuario=@Usuario AND Senha=@Senha";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Usuario", usuario);
                     cmd.Parameters.AddWithValue("@Senha", senha);
 
-                    object result = cmd.ExecuteScalar();
-
-                    if (result != null)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        int empresaId = Convert.ToInt32(result);
-                        MessageBox.Show("Login master da empresa realizado com sucesso!");
+                        if (reader.Read())
+                        {
+                            int empresaId = reader.GetInt32(0);
+                            string nomeEmpresa = reader.GetString(1);
 
-                        PgnInicioEmpresa product = new PgnInicioEmpresa();
-                        this.Visible = false;
-                        product.ShowDialog();
-                        this.Visible = true;
+                            // 🔹 Salva dados na Sessao
+                            Sessao.EmpresaId = empresaId;
+                            Sessao.NomeEmpresa = nomeEmpresa;
+                            Sessao.TipoUsuario = "Empresa";
 
-                        return; // Sai do método, pois o login já foi feito
+                            MessageBox.Show($"Login master da empresa '{nomeEmpresa}' realizado com sucesso!");
+
+                            reader.Close();
+
+                            PgnInicioEmpresa product = new PgnInicioEmpresa();
+                            this.Visible = false;
+                            product.ShowDialog();
+                            this.Visible = true;
+
+                            return;
+                        }
                     }
                 }
 
                 // 2. Verifica usuários externos
-                string sqle = "SELECT ID_Empresa FROM Funcionarios WHERE UsuarioF=@UsuarioF AND SenhaF=@SenhaF";
+                string sqle = "SELECT ID_Empresa, NomeFuncionario FROM Funcionarios WHERE UsuarioF=@UsuarioF AND SenhaF=@SenhaF";
                 using (SqlCommand cmd = new SqlCommand(sqle, conn))
                 {
                     cmd.Parameters.AddWithValue("@UsuarioF", usuario);
                     cmd.Parameters.AddWithValue("@SenhaF", senha);
 
-                    object result = cmd.ExecuteScalar();
-
-                    if (result != null)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        int empresaId = Convert.ToInt32(result);
-                        MessageBox.Show("Login de usuário externo realizado com sucesso!");
+                        if (reader.Read())
+                        {
+                            int empresaId = reader.GetInt32(0);
+                            string nomeFuncionario = reader.GetString(1);
 
-                        PgnInicioExterno product = new PgnInicioExterno();
-                        this.Visible = false;
-                        product.ShowDialog();
-                        this.Visible = true;
+                            // 🔹 Salva dados na Sessao
+                            Sessao.EmpresaId = empresaId;
+                            Sessao.NomeEmpresa = nomeFuncionario; // ou puxar nome da empresa se preferir
+                            Sessao.TipoUsuario = "Externo";
 
-                        return; // Sai do método, pois o login já foi feito
+                            MessageBox.Show($"Login de usuário externo '{nomeFuncionario}' realizado com sucesso!");
+
+                            reader.Close();
+
+                            PgnInicioExterno product = new PgnInicioExterno();
+                            this.Visible = false;
+                            product.ShowDialog();
+                            this.Visible = true;
+
+                            return;
+                        }
                     }
                 }
 
@@ -85,5 +105,3 @@ namespace AppControleRestaurante
         }
     }
 }
-
-

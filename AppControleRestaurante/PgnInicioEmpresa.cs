@@ -24,7 +24,7 @@ namespace AppControleRestaurante
 
         private void btncatalogo_Click(object sender, EventArgs e)
         {
-            CadCatalogo product = new CadCatalogo();
+            Catalogo product = new Catalogo();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
