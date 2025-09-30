@@ -27,10 +27,9 @@ namespace AppControleRestaurante
         {
 
         }
-      
+
         private void btnSalvarP_Click(object sender, EventArgs e)
         {
-
             string NomeItem = txbNomeP.Text;
             string descricao = txbDescricaoP.Text;
             string custo = txbCustoP.Text;
@@ -52,7 +51,6 @@ namespace AppControleRestaurante
                 return;
             }
 
-
             // Verifica se há uma empresa logada
             if (Sessao.EmpresaId <= 0)
             {
@@ -60,9 +58,18 @@ namespace AppControleRestaurante
                 return;
             }
 
+            // ✅ ADICIONE ESTA VALIDAÇÃO PARA CATEGORIA
+            if (cmbCategoriaP.Text == null) // ou cmbCategoria.Text se for ComboBox simples
+            {
+                MessageBox.Show("Selecione uma categoria!");
+                return;
+            }
+
             string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
-            string sql = "INSERT INTO CATALOGO (NomeItem, Descricao, Custo, Preco, EmpresaId) " +
-                         "VALUES (@NomeItem, @Descricao, @Custo, @Preco, @EmpresaId)";
+
+            // ✅ ADICIONE "Categoria" NA QUERY
+            string sql = "INSERT INTO CATALOGO (NomeItem, Descricao, Custo, Preco, Categoria, EmpresaId) " +
+                         "VALUES (@NomeItem, @Descricao, @Custo, @Preco, @Categoria, @EmpresaId)";
 
             using (SqlConnection conn = new SqlConnection(conexao))
             {
@@ -73,7 +80,13 @@ namespace AppControleRestaurante
                     cmd.Parameters.AddWithValue("@Custo", custoDecimal);
                     cmd.Parameters.AddWithValue("@Preco", precoDecimal);
 
-                    // 🔹 Aqui usamos o ID da empresa logada
+                    // ✅ ADICIONE O PARÂMETRO DE CATEGORIA
+                    // Use SelectedValue se o ComboBox tiver ValueMember configurado
+                    // Ou use Text se for apenas texto
+                    cmd.Parameters.AddWithValue("@Categoria", cmbCategoriaP.Text);
+                    // OU
+                    // cmd.Parameters.AddWithValue("@Categoria", cmbCategoria.Text);
+
                     cmd.Parameters.AddWithValue("@EmpresaId", Sessao.EmpresaId);
 
                     try
@@ -88,6 +101,11 @@ namespace AppControleRestaurante
                     }
                 }
             }
+
+            Catalogo product = new Catalogo();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
         }
 
         private void label1_Click_1(object sender, EventArgs e)

@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnCadP = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cJ3027473PR2DataSet = new AppControleRestaurante.CJ3027473PR2DataSet();
-            this.catalogoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.catalogoTableAdapter = new AppControleRestaurante.CJ3027473PR2DataSetTableAdapters.CatalogoTableAdapter();
             this.idItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +39,13 @@
             this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.custoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catalogoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cJ3027473PR2DataSet = new AppControleRestaurante.CJ3027473PR2DataSet();
+            this.catalogoTableAdapter = new AppControleRestaurante.CJ3027473PR2DataSetTableAdapters.CatalogoTableAdapter();
             this.txbPesquisa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cJ3027473PR2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cJ3027473PR2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadP
@@ -77,20 +77,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(803, 260);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // cJ3027473PR2DataSet
-            // 
-            this.cJ3027473PR2DataSet.DataSetName = "CJ3027473PR2DataSet";
-            this.cJ3027473PR2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // catalogoBindingSource
-            // 
-            this.catalogoBindingSource.DataMember = "Catalogo";
-            this.catalogoBindingSource.DataSource = this.cJ3027473PR2DataSet;
-            // 
-            // catalogoTableAdapter
-            // 
-            this.catalogoTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idItemDataGridViewTextBoxColumn
             // 
@@ -141,6 +128,20 @@
             this.custoDataGridViewTextBoxColumn.HeaderText = "custo";
             this.custoDataGridViewTextBoxColumn.Name = "custoDataGridViewTextBoxColumn";
             // 
+            // catalogoBindingSource
+            // 
+            this.catalogoBindingSource.DataMember = "Catalogo";
+            this.catalogoBindingSource.DataSource = this.cJ3027473PR2DataSet;
+            // 
+            // cJ3027473PR2DataSet
+            // 
+            this.cJ3027473PR2DataSet.DataSetName = "CJ3027473PR2DataSet";
+            this.cJ3027473PR2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // catalogoTableAdapter
+            // 
+            this.catalogoTableAdapter.ClearBeforeFill = true;
+            // 
             // txbPesquisa
             // 
             this.txbPesquisa.Location = new System.Drawing.Point(12, 164);
@@ -161,8 +162,8 @@
             this.Text = "Catalogo";
             this.Load += new System.EventHandler(this.Catalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cJ3027473PR2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cJ3027473PR2DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
