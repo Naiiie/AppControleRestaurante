@@ -37,7 +37,7 @@
             this.LblCNPJ = new System.Windows.Forms.Label();
             this.LblEmail = new System.Windows.Forms.Label();
             this.LblNumero = new System.Windows.Forms.Label();
-            this.CmbTamEmprsa = new System.Windows.Forms.ComboBox();
+            this.CmbTamEmpresa = new System.Windows.Forms.ComboBox();
             this.LblTamEmpresa = new System.Windows.Forms.Label();
             this.LblUserEmpresa = new System.Windows.Forms.Label();
             this.TxbUsuario = new System.Windows.Forms.TextBox();
@@ -54,7 +54,6 @@
             this.TxbNome.Name = "TxbNome";
             this.TxbNome.Size = new System.Drawing.Size(246, 20);
             this.TxbNome.TabIndex = 0;
-            this.TxbNome.TextChanged += new System.EventHandler(this.TxbNome_TextChanged);
             // 
             // TxbCNPJ
             // 
@@ -113,18 +112,18 @@
             this.LblNumero.TabIndex = 7;
             this.LblNumero.Text = "Numero";
             // 
-            // CmbTamEmprsa
+            // CmbTamEmpresa
             // 
-            this.CmbTamEmprsa.FormattingEnabled = true;
-            this.CmbTamEmprsa.Items.AddRange(new object[] {
+            this.CmbTamEmpresa.FormattingEnabled = true;
+            this.CmbTamEmpresa.Items.AddRange(new object[] {
             "(1)- Micro Empresa",
             "(2)-Pequena Empresa",
             "(3)-Média Empresa",
             "(4)- Grande Empresa"});
-            this.CmbTamEmprsa.Location = new System.Drawing.Point(47, 331);
-            this.CmbTamEmprsa.Name = "CmbTamEmprsa";
-            this.CmbTamEmprsa.Size = new System.Drawing.Size(246, 21);
-            this.CmbTamEmprsa.TabIndex = 13;
+            this.CmbTamEmpresa.Location = new System.Drawing.Point(47, 331);
+            this.CmbTamEmpresa.Name = "CmbTamEmpresa";
+            this.CmbTamEmpresa.Size = new System.Drawing.Size(246, 21);
+            this.CmbTamEmpresa.TabIndex = 13;
             // 
             // LblTamEmpresa
             // 
@@ -167,7 +166,6 @@
             this.TxbSenha.Size = new System.Drawing.Size(246, 20);
             this.TxbSenha.TabIndex = 19;
             this.TxbSenha.UseSystemPasswordChar = true;
-            this.TxbSenha.TextChanged += new System.EventHandler(this.TxbSenha_TextChanged);
             // 
             // BtnSalvar
             // 
@@ -177,7 +175,6 @@
             this.BtnSalvar.TabIndex = 20;
             this.BtnSalvar.Text = "SALVAR e ENTRAR";
             this.BtnSalvar.UseVisualStyleBackColor = true;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // pictureLog1
             // 
@@ -189,7 +186,7 @@
             this.pictureLog1.TabIndex = 21;
             this.pictureLog1.TabStop = false;
             // 
-            // PgnLoginEmpresa
+            // PgnCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +197,7 @@
             this.Controls.Add(this.TxbUsuario);
             this.Controls.Add(this.LblUserEmpresa);
             this.Controls.Add(this.LblTamEmpresa);
-            this.Controls.Add(this.CmbTamEmprsa);
+            this.Controls.Add(this.CmbTamEmpresa);
             this.Controls.Add(this.LblNumero);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.LblCNPJ);
@@ -210,7 +207,7 @@
             this.Controls.Add(this.TxbCNPJ);
             this.Controls.Add(this.TxbNome);
             this.Controls.Add(this.pictureLog1);
-            this.Name = "PgnLoginEmpresa";
+            this.Name = "PgnCadEmpresa";
             this.Text = "PgnLoginEmpresa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureLog1)).EndInit();
             this.ResumeLayout(false);
@@ -228,7 +225,7 @@
         private System.Windows.Forms.Label LblCNPJ;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.Label LblNumero;
-        private System.Windows.Forms.ComboBox CmbTamEmprsa;
+        private System.Windows.Forms.ComboBox CmbTamEmpresa;
         private System.Windows.Forms.Label LblTamEmpresa;
         private System.Windows.Forms.Label LblUserEmpresa;
         private System.Windows.Forms.TextBox TxbUsuario;

@@ -102,6 +102,7 @@ namespace AppControleRestaurante
                 }
             }
 
+
             Catalogo product = new Catalogo();
             this.Visible = false;
             product.ShowDialog();

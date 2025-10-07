@@ -28,5 +28,11 @@ namespace AppControleRestaurante
         public static string TipoUsuario { get; set; } = "";
         public static string NomeEmpresa { get; set; } = "";
     }
+    public static class Sessao1
+    {
+        public static int EmpresaId { get; set; }
+        public static string NomeEmpresa { get; set; }
+        public static string Usuario { get; set; }
+    }
 
 }

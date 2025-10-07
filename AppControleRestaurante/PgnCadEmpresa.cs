@@ -18,91 +18,46 @@ namespace AppControleRestaurante
             InitializeComponent();
         }
 
-        public object TextNome { get; private set; }
-        //salva os dados no banco e no lugar correto
-        private void BtnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string Nome = TxbNome.Text;
-            //string ID_Empresa = TxbID_Empresa.Text;  
-            string CNPJ = TxbCNPJ.Text;
-            string Email = TxbEmail.Text;
-            string Contato = TxbContato.Text;
-            string Usuario = TxbUsuario.Text;
-            string Senha = TxbSenha.Text;
+            string nomeEmpresa = TxbNome.Text;
+            string usuario = TxbUsuario.Text;
+            string senha = TxbSenha.Text;
 
+            if (string.IsNullOrWhiteSpace(nomeEmpresa) ||
+                string.IsNullOrWhiteSpace(usuario) ||
+                string.IsNullOrWhiteSpace(senha))
+            {
+                MessageBox.Show("Preencha todos os campos!", "Erro");
+                return;
+            }
 
+            // Gera o hash da senha
+            string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
 
             string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
-            string sql = "INSERT INTO EMPRESAS (Nome, CNPJ, Email, Contato, Usuario,Senha) VALUES (@Nome ,@CNPJ ,@Email,@Contato, @Usuario, @Senha)";
-            using (SqlConnection conn = new SqlConnection(conexao))
-            {
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Nome", Nome);
-                    cmd.Parameters.AddWithValue("@CNPJ", CNPJ);
-                    cmd.Parameters.AddWithValue("@Email", Email);
-                    cmd.Parameters.AddWithValue("@Contato", Contato);
-                    cmd.Parameters.AddWithValue("@Usuario", Usuario);
-                    cmd.Parameters.AddWithValue("@Senha", Senha);
-
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro ao salvar: " + ex.Message);
-
-                    }
-                }
-            }
-            PgnInicioEmpresa product = new PgnInicioEmpresa();
-            this.Visible = false;
-            product.ShowDialog();
-            this.Visible = true;
-
 
             using (SqlConnection conn = new SqlConnection(conexao))
             {
+                conn.Open();
+
+                string sql = "INSERT INTO Empresas (Nome, Usuario, SenhaHash) VALUES (@Nome, @Usuario, @SenhaHash)";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Usuario", Usuario);
-                    cmd.Parameters.AddWithValue("@Senha", Senha);
+                    cmd.Parameters.AddWithValue("@Nome", nomeEmpresa);
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+                    cmd.Parameters.AddWithValue("@SenhaHash", senhaHash);
 
-                    try
-                    {
-                        conn.Open();
-                        int count = (int)cmd.ExecuteScalar();
-
-                        if (count > 0)
-                        {
-                            MessageBox.Show("Login realizado com sucesso!");
-
-                            // abre a tela principal
-                            PgnInicioEmpresa inicio = new PgnInicioEmpresa();
-                            this.Hide();
-                            inicio.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuário ou senha inválidos!");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro: " + ex.Message);
-                    }
+                    cmd.ExecuteNonQuery();
                 }
             }
-        }
 
-
-        private void btnGeradorID1_Click(object sender, EventArgs e)
-        {
+            MessageBox.Show("Empresa cadastrada com sucesso!", "Sucesso");
+            this.Close();
         }
+    }
+}
+
 
         private void TxbNome_TextChanged(object sender, EventArgs e)
         {

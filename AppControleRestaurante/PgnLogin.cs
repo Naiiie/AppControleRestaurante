@@ -23,85 +23,101 @@ namespace AppControleRestaurante
 
         }
 
-        private void btnLogEntrar_Click(object sender, EventArgs e)
-        {
-            string usuario = txbLogUsuario.Text;
-            string senha = txbLogSenha.Text;
-
-            string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
-            using (SqlConnection conn = new SqlConnection(conexao))
+            private void btnLogEntrar_Click(object sender, EventArgs e)
             {
-                conn.Open();
+                string usuario = txbLogUsuario.Text;
+                string senha = txbLogSenha.Text;
 
-                // 1. Verifica usuário master (empresa)
-                string sql = "SELECT ID_Empresa, Nome FROM Empresas WHERE Usuario=@Usuario AND Senha=@Senha";
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
+
+                using (SqlConnection conn = new SqlConnection(conexao))
                 {
-                    cmd.Parameters.AddWithValue("@Usuario", usuario);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    conn.Open();
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    // 1️⃣ Verifica login de EMPRESA (usuário master)
+                    string sql = "SELECT ID_Empresa, Nome, SenhaHash FROM Empresas WHERE Usuario=@Usuario";
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
-                        if (reader.Read())
+                        cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            int empresaId = reader.GetInt32(0);
-                            string nomeEmpresa = reader.GetString(1);
+                            if (reader.Read())
+                            {
+                                int empresaId = reader.GetInt32(0);
+                                string nomeEmpresa = reader.GetString(1);
+                                string senhaHash = reader.GetString(2);
 
-                            // 🔹 Salva dados na Sessao
-                            Sessao.EmpresaId = empresaId;
-                            Sessao.NomeEmpresa = nomeEmpresa;
-                            Sessao.TipoUsuario = "Empresa";
+                                // 🧠 Verifica a senha digitada com o hash salvo
+                                if (BCrypt.Net.BCrypt.Verify(senha, senhaHash))
+                                {
+                                    // ✅ Login OK
+                                    Sessao.EmpresaId = empresaId;
+                                    Sessao.NomeEmpresa = nomeEmpresa;
+                                    Sessao.TipoUsuario = "Empresa";
 
-                            MessageBox.Show($"Login master da empresa '{nomeEmpresa}' realizado com sucesso!");
+                                    MessageBox.Show($"Login master da empresa '{nomeEmpresa}' realizado com sucesso!", "Sucesso");
 
-                            reader.Close();
+                                    reader.Close();
 
-                            PgnInicioEmpresa product = new PgnInicioEmpresa();
-                            this.Visible = false;
-                            product.ShowDialog();
-                            this.Visible = true;
-
-                            return;
+                                    PgnInicioEmpresa tela = new PgnInicioEmpresa();
+                                    this.Visible = false;
+                                    tela.ShowDialog();
+                                    this.Visible = true;
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Senha incorreta!", "Erro");
+                                    return;
+                                }
+                            }
                         }
                     }
-                }
 
-                // 2. Verifica usuários externos
-                string sqle = "SELECT ID_Empresa, NomeFuncionario FROM Funcionarios WHERE UsuarioF=@UsuarioF AND SenhaF=@SenhaF";
-                using (SqlCommand cmd = new SqlCommand(sqle, conn))
-                {
-                    cmd.Parameters.AddWithValue("@UsuarioF", usuario);
-                    cmd.Parameters.AddWithValue("@SenhaF", senha);
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    // 2️⃣ Verifica login de FUNCIONÁRIO
+                    string sqle = "SELECT ID_Empresa, NomeFuncionario, SenhaHashF FROM Funcionarios WHERE UsuarioF=@UsuarioF";
+                    using (SqlCommand cmd = new SqlCommand(sqle, conn))
                     {
-                        if (reader.Read())
+                        cmd.Parameters.AddWithValue("@UsuarioF", usuario);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            int empresaId = reader.GetInt32(0);
-                            string nomeFuncionario = reader.GetString(1);
+                            if (reader.Read())
+                            {
+                                int empresaId = reader.GetInt32(0);
+                                string nomeFuncionario = reader.GetString(1);
+                                string senhaHashF = reader.GetString(2);
 
-                            // 🔹 Salva dados na Sessao
-                            Sessao.EmpresaId = empresaId;
-                            Sessao.NomeEmpresa = nomeFuncionario; // ou puxar nome da empresa se preferir
-                            Sessao.TipoUsuario = "Externo";
+                                if (BCrypt.Net.BCrypt.Verify(senha, senhaHashF))
+                                {
+                                    // ✅ Login OK
+                                    Sessao.EmpresaId = empresaId;
+                                    Sessao.NomeEmpresa = nomeFuncionario;
+                                    Sessao.TipoUsuario = "Externo";
 
-                            MessageBox.Show($"Login de usuário externo '{nomeFuncionario}' realizado com sucesso!");
+                                    MessageBox.Show($"Login de usuário externo '{nomeFuncionario}' realizado com sucesso!", "Sucesso");
 
-                            reader.Close();
+                                    reader.Close();
 
-                            PgnInicioExterno product = new PgnInicioExterno();
-                            this.Visible = false;
-                            product.ShowDialog();
-                            this.Visible = true;
-
-                            return;
+                                    PgnInicioExterno tela = new PgnInicioExterno();
+                                    this.Visible = false;
+                                    tela.ShowDialog();
+                                    this.Visible = true;
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Senha incorreta!", "Erro");
+                                    return;
+                                }
+                            }
                         }
                     }
-                }
 
-                // 👉 Se chegou aqui, nenhum login foi válido
-                MessageBox.Show("Usuário ou senha inválidos!");
+                    // 3️⃣ Se chegou aqui → nenhum login funcionou
+                    MessageBox.Show("Usuário ou senha inválidos!", "Erro");
+                }
             }
         }
     }
-}

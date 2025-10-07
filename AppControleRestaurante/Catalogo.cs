@@ -30,28 +30,25 @@ namespace AppControleRestaurante
 
         private void Catalogo_Load(object sender, EventArgs e)
         {
-            int empresaId = Sessao.EmpresaId;
-
-            string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
-            using (SqlConnection conn = new SqlConnection(conexao))
             {
-                conn.Open();
-                string query = "SELECT NomeItem, Descricao, Preco, Categoria, Ativo, Custo " +
-                "FROM Catalogo " +
-                "WHERE EmpresaId = @EmpresaId";
-               
+                using (SqlConnection conn = new SqlConnection("Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno"))
+                {
+                    conn.Open();
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@EmpresaId", empresaId);
+                    // Filtra apenas os produtos da empresa logada
+                    string query = "SELECT * FROM Catalogo WHERE EmpresaId = @EmpresaId";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@EmpresaId", Sessao.EmpresaId);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.AutoGenerateColumns = true; // garante que apareçam todas
+                }
             }
         }
-
 
 
         private void btnPesquisarP_Click(object sender, EventArgs e)
@@ -101,6 +98,7 @@ namespace AppControleRestaurante
                     dataGridView1.DataSource = dt;
                 }
             }
+
         }
     }
 }
