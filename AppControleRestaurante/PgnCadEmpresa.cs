@@ -20,19 +20,19 @@ namespace AppControleRestaurante
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string nomeEmpresa = TxbNome.Text;
-            string usuario = TxbUsuario.Text;
-            string senha = TxbSenha.Text;
+            string nomeEmpresa = TxbNome.Text.Trim();
+            string usuario = TxbUsuario.Text.Trim();
+            string senha = TxbSenha.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(nomeEmpresa) ||
                 string.IsNullOrWhiteSpace(usuario) ||
                 string.IsNullOrWhiteSpace(senha))
             {
-                MessageBox.Show("Preencha todos os campos!", "Erro");
+                MessageBox.Show("Preencha todos os campos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Gera o hash da senha
+            // Gera o hash seguro da senha
             string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
 
             string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
@@ -41,6 +41,8 @@ namespace AppControleRestaurante
             {
                 conn.Open();
 
+                // ⚠️ Certifique-se de ter a coluna "SenhaHash" no SQL!
+                // Caso sua tabela ainda use "Senha", troque o nome no INSERT.
                 string sql = "INSERT INTO Empresas (Nome, Usuario, SenhaHash) VALUES (@Nome, @Usuario, @SenhaHash)";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
@@ -48,18 +50,29 @@ namespace AppControleRestaurante
                     cmd.Parameters.AddWithValue("@Usuario", usuario);
                     cmd.Parameters.AddWithValue("@SenhaHash", senhaHash);
 
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Empresa cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show($"Erro ao salvar empresa:\n{ex.Message}", "Erro SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-
-            MessageBox.Show("Empresa cadastrada com sucesso!", "Sucesso");
-            this.Close();
         }
     }
 }
 
 
-        private void TxbNome_TextChanged(object sender, EventArgs e)
+
+namespace AppControleRestaurante
+{
+    public partial class PgnCadEmpresa : Form
+    {
+        private void TxbNome_TextChange(object sender, EventArgs e)
         {
 
         }

@@ -29,6 +29,11 @@ namespace AppControleRestaurante
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void btnFinanças_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

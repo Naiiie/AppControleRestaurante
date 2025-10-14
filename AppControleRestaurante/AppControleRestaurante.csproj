@@ -80,6 +80,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CJ3027473PR2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Financas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financas.Designer.cs">
+      <DependentUpon>Financas.cs</DependentUpon>
+    </Compile>
     <Compile Include="PgnInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <EmbeddedResource Include="Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Financas.resx">
+      <DependentUpon>Financas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PgnInicio.resx">
       <DependentUpon>PgnInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +165,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="sessao.resx">
       <DependentUpon>sessao.cs</DependentUpon>
@@ -184,6 +194,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-14 102820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-09-02 122027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-14 123419.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-14 125033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-14 125335.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

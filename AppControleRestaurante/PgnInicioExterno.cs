@@ -16,5 +16,14 @@ namespace AppControleRestaurante
         {
             InitializeComponent();
         }
+
+        private void btncatalogo_Click(object sender, EventArgs e)
+        {
+            Catalogo product = new Catalogo();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
+        }
     }
-}
+    }
+

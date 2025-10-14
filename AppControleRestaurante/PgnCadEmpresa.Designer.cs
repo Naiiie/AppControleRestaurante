@@ -175,6 +175,7 @@
             this.BtnSalvar.TabIndex = 20;
             this.BtnSalvar.Text = "SALVAR e ENTRAR";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+       
             // 
             // pictureLog1
             // 

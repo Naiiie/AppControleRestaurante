@@ -33,6 +33,7 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.btncatalogo = new System.Windows.Forms.Button();
+            this.btnFinanças = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIn1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +80,22 @@
             this.btncatalogo.UseVisualStyleBackColor = false;
             this.btncatalogo.Click += new System.EventHandler(this.btncatalogo_Click);
             // 
+            // btnFinanças
+            // 
+            this.btnFinanças.Image = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_14_102820;
+            this.btnFinanças.Location = new System.Drawing.Point(635, 0);
+            this.btnFinanças.Name = "btnFinanças";
+            this.btnFinanças.Size = new System.Drawing.Size(63, 65);
+            this.btnFinanças.TabIndex = 4;
+            this.btnFinanças.UseVisualStyleBackColor = true;
+            this.btnFinanças.Click += new System.EventHandler(this.btnFinanças_Click);
+            // 
             // PgnInicioEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFinanças);
             this.Controls.Add(this.btncatalogo);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
@@ -101,5 +113,6 @@
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Button btncatalogo;
+        private System.Windows.Forms.Button btnFinanças;
     }
 }
