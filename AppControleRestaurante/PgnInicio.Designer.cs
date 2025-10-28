@@ -36,42 +36,53 @@
             // BtnCadEmpresa
             // 
             this.BtnCadEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(209)))));
-            this.BtnCadEmpresa.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_14_125335;
-            this.BtnCadEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnCadEmpresa.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCadEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(209)))));
-            this.BtnCadEmpresa.Location = new System.Drawing.Point(30, 153);
+            this.BtnCadEmpresa.Font = new System.Drawing.Font("Noto Serif Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadEmpresa.ForeColor = System.Drawing.Color.Black;
+            this.BtnCadEmpresa.Location = new System.Drawing.Point(28, 133);
             this.BtnCadEmpresa.Name = "BtnCadEmpresa";
-            this.BtnCadEmpresa.Size = new System.Drawing.Size(176, 10);
+            this.BtnCadEmpresa.Size = new System.Drawing.Size(196, 47);
             this.BtnCadEmpresa.TabIndex = 1;
-            this.BtnCadEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnCadEmpresa.UseVisualStyleBackColor = false;
+            this.BtnCadEmpresa.Text = "Cadastro da Empresa";
+            this.BtnCadEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnCadEmpresa.UseVisualStyleBackColor = true;
             this.BtnCadEmpresa.UseWaitCursor = true;
-            this.BtnCadEmpresa.Visible = false;
             this.BtnCadEmpresa.Click += new System.EventHandler(this.BtnCadEmpresa_Click);
             // 
             // BtnCadExterno
             // 
+            this.BtnCadExterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(209)))));
             this.BtnCadExterno.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCadExterno.Location = new System.Drawing.Point(460, 207);
+            this.BtnCadExterno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadExterno.Font = new System.Drawing.Font("Noto Serif Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadExterno.ForeColor = System.Drawing.Color.Black;
+            this.BtnCadExterno.Location = new System.Drawing.Point(270, 133);
             this.BtnCadExterno.Name = "BtnCadExterno";
-            this.BtnCadExterno.Size = new System.Drawing.Size(199, 46);
-            this.BtnCadExterno.TabIndex = 2;
+            this.BtnCadExterno.Size = new System.Drawing.Size(196, 47);
+            this.BtnCadExterno.TabIndex = 8;
             this.BtnCadExterno.Text = "Cadastro Externo";
+            this.BtnCadExterno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.BtnCadExterno.UseVisualStyleBackColor = true;
-            this.BtnCadExterno.Click += new System.EventHandler(this.button2_Click);
+            this.BtnCadExterno.UseWaitCursor = true;
+            this.BtnCadExterno.Click += new System.EventHandler(this.BtnCadExterno_Click);
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(216)))), ((int)(((byte)(209)))));
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnLogin.Location = new System.Drawing.Point(585, 380);
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Noto Serif Georgian", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(540, 366);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(175, 50);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Ir para o login";
+            this.btnLogin.Size = new System.Drawing.Size(222, 54);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Ir para login";
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.UseWaitCursor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // PgnInicial
             // 
@@ -92,9 +103,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button BtnCadExterno;
-        private System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Button BtnCadEmpresa;
+        public System.Windows.Forms.Button BtnCadExterno;
+        public System.Windows.Forms.Button btnLogin;
     }
 }
 
