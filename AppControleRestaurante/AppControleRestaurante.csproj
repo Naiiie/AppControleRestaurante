@@ -124,6 +124,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecaDAO.cs" />
+    <Compile Include="Recado.cs" />
+    <Compile Include="RecadoFuncionarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecadoFuncionarioControl.Designer.cs">
+      <DependentUpon>RecadoFuncionarioControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="sessao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +217,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Captura de tela 2025-10-14 125335.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 142038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 144237.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 144618.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 144825.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 144953.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 141450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 1446181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 1449531.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 142134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 154327.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 155309.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-10-30 161901.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

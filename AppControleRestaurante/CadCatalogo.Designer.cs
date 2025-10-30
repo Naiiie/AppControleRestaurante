@@ -28,77 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNomeP = new System.Windows.Forms.Label();
-            this.lblDescricaoP = new System.Windows.Forms.Label();
-            this.lblAtividadeP = new System.Windows.Forms.Label();
-            this.lblValorVenda = new System.Windows.Forms.Label();
-            this.lblValorCusto = new System.Windows.Forms.Label();
             this.CmbAtividadeP = new System.Windows.Forms.ComboBox();
             this.btnSalvarP = new System.Windows.Forms.Button();
             this.cmbCategoriaP = new System.Windows.Forms.ComboBox();
-            this.LblCategoriaP = new System.Windows.Forms.Label();
             this.txbNomeP = new System.Windows.Forms.TextBox();
             this.txbDescricaoP = new System.Windows.Forms.TextBox();
             this.txbCustoP = new System.Windows.Forms.TextBox();
             this.txbValorP = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(799, 439);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblNomeP
-            // 
-            this.lblNomeP.AutoSize = true;
-            this.lblNomeP.Location = new System.Drawing.Point(36, 35);
-            this.lblNomeP.Name = "lblNomeP";
-            this.lblNomeP.Size = new System.Drawing.Size(93, 13);
-            this.lblNomeP.TabIndex = 1;
-            this.lblNomeP.Text = "Nome do Produto:";
-            this.lblNomeP.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblDescricaoP
-            // 
-            this.lblDescricaoP.AutoSize = true;
-            this.lblDescricaoP.Location = new System.Drawing.Point(36, 110);
-            this.lblDescricaoP.Name = "lblDescricaoP";
-            this.lblDescricaoP.Size = new System.Drawing.Size(109, 13);
-            this.lblDescricaoP.TabIndex = 4;
-            this.lblDescricaoP.Text = "Descrição do produto";
-            // 
-            // lblAtividadeP
-            // 
-            this.lblAtividadeP.AutoSize = true;
-            this.lblAtividadeP.Location = new System.Drawing.Point(36, 344);
-            this.lblAtividadeP.Name = "lblAtividadeP";
-            this.lblAtividadeP.Size = new System.Drawing.Size(47, 13);
-            this.lblAtividadeP.TabIndex = 5;
-            this.lblAtividadeP.Text = "Produto:";
-            this.lblAtividadeP.Click += new System.EventHandler(this.lblAtividadeP_Click);
-            // 
-            // lblValorVenda
-            // 
-            this.lblValorVenda.AutoSize = true;
-            this.lblValorVenda.Location = new System.Drawing.Point(36, 262);
-            this.lblValorVenda.Name = "lblValorVenda";
-            this.lblValorVenda.Size = new System.Drawing.Size(83, 13);
-            this.lblValorVenda.TabIndex = 6;
-            this.lblValorVenda.Text = "Valor de Venda:";
-            // 
-            // lblValorCusto
-            // 
-            this.lblValorCusto.AutoSize = true;
-            this.lblValorCusto.Location = new System.Drawing.Point(36, 190);
-            this.lblValorCusto.Name = "lblValorCusto";
-            this.lblValorCusto.Size = new System.Drawing.Size(75, 13);
-            this.lblValorCusto.TabIndex = 7;
-            this.lblValorCusto.Text = "Valor de custo";
             // 
             // CmbAtividadeP
             // 
@@ -106,19 +45,24 @@
             this.CmbAtividadeP.Items.AddRange(new object[] {
             "(1) ATIVO",
             "(2) INATIVO"});
-            this.CmbAtividadeP.Location = new System.Drawing.Point(39, 360);
+            this.CmbAtividadeP.Location = new System.Drawing.Point(458, 145);
             this.CmbAtividadeP.Name = "CmbAtividadeP";
             this.CmbAtividadeP.Size = new System.Drawing.Size(246, 21);
             this.CmbAtividadeP.TabIndex = 14;
+            this.CmbAtividadeP.SelectedIndexChanged += new System.EventHandler(this.CmbAtividadeP_SelectedIndexChanged);
             // 
             // btnSalvarP
             // 
-            this.btnSalvarP.Location = new System.Drawing.Point(540, 384);
+            this.btnSalvarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(206)))), ((int)(((byte)(198)))));
+            this.btnSalvarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarP.Font = new System.Drawing.Font("Noto Sans Georgian", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarP.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarP.Location = new System.Drawing.Point(556, 367);
             this.btnSalvarP.Name = "btnSalvarP";
-            this.btnSalvarP.Size = new System.Drawing.Size(117, 23);
+            this.btnSalvarP.Size = new System.Drawing.Size(200, 57);
             this.btnSalvarP.TabIndex = 17;
             this.btnSalvarP.Text = "Salvar Produto";
-            this.btnSalvarP.UseVisualStyleBackColor = true;
+            this.btnSalvarP.UseVisualStyleBackColor = false;
             this.btnSalvarP.Click += new System.EventHandler(this.btnSalvarP_Click);
             // 
             // cmbCategoriaP
@@ -130,47 +74,49 @@
             "(3) Pratos",
             "(4) Sobremesas",
             "(5)Outros"});
-            this.cmbCategoriaP.Location = new System.Drawing.Point(469, 122);
+            this.cmbCategoriaP.Location = new System.Drawing.Point(458, 254);
             this.cmbCategoriaP.Name = "cmbCategoriaP";
             this.cmbCategoriaP.Size = new System.Drawing.Size(246, 21);
             this.cmbCategoriaP.TabIndex = 18;
             // 
-            // LblCategoriaP
-            // 
-            this.LblCategoriaP.AutoSize = true;
-            this.LblCategoriaP.Location = new System.Drawing.Point(475, 78);
-            this.LblCategoriaP.Name = "LblCategoriaP";
-            this.LblCategoriaP.Size = new System.Drawing.Size(59, 13);
-            this.LblCategoriaP.TabIndex = 20;
-            this.LblCategoriaP.Text = "CategoriaP";
-            // 
             // txbNomeP
             // 
-            this.txbNomeP.Location = new System.Drawing.Point(39, 75);
+            this.txbNomeP.Location = new System.Drawing.Point(26, 97);
             this.txbNomeP.Name = "txbNomeP";
-            this.txbNomeP.Size = new System.Drawing.Size(100, 20);
+            this.txbNomeP.Size = new System.Drawing.Size(201, 20);
             this.txbNomeP.TabIndex = 21;
             // 
             // txbDescricaoP
             // 
-            this.txbDescricaoP.Location = new System.Drawing.Point(39, 152);
+            this.txbDescricaoP.Location = new System.Drawing.Point(26, 170);
+            this.txbDescricaoP.Multiline = true;
             this.txbDescricaoP.Name = "txbDescricaoP";
-            this.txbDescricaoP.Size = new System.Drawing.Size(100, 20);
+            this.txbDescricaoP.Size = new System.Drawing.Size(201, 54);
             this.txbDescricaoP.TabIndex = 22;
             // 
             // txbCustoP
             // 
-            this.txbCustoP.Location = new System.Drawing.Point(39, 227);
+            this.txbCustoP.Location = new System.Drawing.Point(26, 302);
             this.txbCustoP.Name = "txbCustoP";
-            this.txbCustoP.Size = new System.Drawing.Size(100, 20);
+            this.txbCustoP.Size = new System.Drawing.Size(188, 20);
             this.txbCustoP.TabIndex = 23;
             // 
             // txbValorP
             // 
-            this.txbValorP.Location = new System.Drawing.Point(39, 295);
+            this.txbValorP.Location = new System.Drawing.Point(26, 367);
             this.txbValorP.Name = "txbValorP";
-            this.txbValorP.Size = new System.Drawing.Size(100, 20);
+            this.txbValorP.Size = new System.Drawing.Size(201, 20);
             this.txbValorP.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_155309;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(-20, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(842, 458);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // CadCatalogo
             // 
@@ -181,15 +127,9 @@
             this.Controls.Add(this.txbCustoP);
             this.Controls.Add(this.txbDescricaoP);
             this.Controls.Add(this.txbNomeP);
-            this.Controls.Add(this.LblCategoriaP);
             this.Controls.Add(this.cmbCategoriaP);
             this.Controls.Add(this.btnSalvarP);
             this.Controls.Add(this.CmbAtividadeP);
-            this.Controls.Add(this.lblValorCusto);
-            this.Controls.Add(this.lblValorVenda);
-            this.Controls.Add(this.lblAtividadeP);
-            this.Controls.Add(this.lblDescricaoP);
-            this.Controls.Add(this.lblNomeP);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CadCatalogo";
             this.Text = "CadCatalogo";
@@ -202,15 +142,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblNomeP;
-        private System.Windows.Forms.Label lblDescricaoP;
-        private System.Windows.Forms.Label lblAtividadeP;
-        private System.Windows.Forms.Label lblValorVenda;
-        private System.Windows.Forms.Label lblValorCusto;
         private System.Windows.Forms.ComboBox CmbAtividadeP;
         private System.Windows.Forms.Button btnSalvarP;
         private System.Windows.Forms.ComboBox cmbCategoriaP;
-        private System.Windows.Forms.Label LblCategoriaP;
         private System.Windows.Forms.TextBox txbNomeP;
         private System.Windows.Forms.TextBox txbDescricaoP;
         private System.Windows.Forms.TextBox txbCustoP;

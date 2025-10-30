@@ -44,8 +44,8 @@ namespace AppControleRestaurante
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    dataGridView1.DataSource = dt;
-                    dataGridView1.AutoGenerateColumns = true; // garante que apareçam todas
+                    GridProdutos.DataSource = dt;
+                    GridProdutos.AutoGenerateColumns = true; // garante que apareçam todas
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace AppControleRestaurante
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dataGridView1.DataSource = dt;
+                GridProdutos.DataSource = dt;
             }
         }
 
@@ -95,7 +95,7 @@ namespace AppControleRestaurante
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    dataGridView1.DataSource = dt;
+                    GridProdutos.DataSource = dt;
                 }
             }
 

@@ -113,5 +113,10 @@ namespace AppControleRestaurante
         {
 
         }
+
+        private void CmbAtividadeP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

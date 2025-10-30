@@ -29,31 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnInicioExterno));
+            this.btnMensagens = new System.Windows.Forms.Button();
             this.btncatalogo = new System.Windows.Forms.Button();
             this.pictureIn2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIn2)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnMensagens
+            // 
+            this.btnMensagens.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_161901;
+            this.btnMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(206)))), ((int)(((byte)(198)))));
+            this.btnMensagens.Location = new System.Drawing.Point(666, 83);
+            this.btnMensagens.Name = "btnMensagens";
+            this.btnMensagens.Size = new System.Drawing.Size(93, 79);
+            this.btnMensagens.TabIndex = 5;
+            this.btnMensagens.UseVisualStyleBackColor = true;
+            // 
             // btncatalogo
             // 
+            this.btncatalogo.AllowDrop = true;
             this.btncatalogo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btncatalogo.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btncatalogo.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_09_02_122027;
-            this.btncatalogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btncatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(206)))), ((int)(((byte)(198)))));
+            this.btncatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(206)))), ((int)(((byte)(198)))));
             this.btncatalogo.Image = ((System.Drawing.Image)(resources.GetObject("btncatalogo.Image")));
             this.btncatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncatalogo.Location = new System.Drawing.Point(563, 12);
+            this.btncatalogo.Location = new System.Drawing.Point(676, 22);
             this.btncatalogo.Name = "btncatalogo";
-            this.btncatalogo.Size = new System.Drawing.Size(60, 65);
+            this.btncatalogo.Size = new System.Drawing.Size(94, 69);
             this.btncatalogo.TabIndex = 4;
-            this.btncatalogo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncatalogo.UseVisualStyleBackColor = false;
             this.btncatalogo.Click += new System.EventHandler(this.btncatalogo_Click);
             // 
             // pictureIn2
             // 
             this.pictureIn2.Image = ((System.Drawing.Image)(resources.GetObject("pictureIn2.Image")));
-            this.pictureIn2.Location = new System.Drawing.Point(0, -5);
+            this.pictureIn2.Location = new System.Drawing.Point(1, 12);
             this.pictureIn2.Name = "pictureIn2";
             this.pictureIn2.Size = new System.Drawing.Size(800, 467);
             this.pictureIn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,6 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMensagens);
             this.Controls.Add(this.btncatalogo);
             this.Controls.Add(this.pictureIn2);
             this.Name = "PgnInicioExterno";
@@ -78,5 +91,6 @@
 
         private System.Windows.Forms.PictureBox pictureIn2;
         private System.Windows.Forms.Button btncatalogo;
+        private System.Windows.Forms.Button btnMensagens;
     }
 }
