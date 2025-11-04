@@ -39,14 +39,23 @@ namespace AppControleRestaurante
             // Adicione aqui a lógica para o evento de mudança de texto
         }
 
-        private void btnFuncionarios_Click(object sender, EventArgs e)
+        private void btnUsers_Click(object sender, EventArgs e)
         {
-            // Adicione aqui a lógica para abrir o formulário de funcionários
-            // Exemplo:
-            // PgnFuncionarios funcionarios = new PgnFuncionarios();
-            // this.Visible = false;
-            // funcionarios.ShowDialog();
-            // this.Visible = true;
+             pgnFuncionarios funcionarios = new pgnFuncionarios();
+             this.Visible = false;
+             funcionarios.ShowDialog();
+            
+            this.Visible = true;
+        }
+
+        private void btnMensagens_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

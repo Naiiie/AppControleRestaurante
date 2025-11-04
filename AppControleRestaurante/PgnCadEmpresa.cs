@@ -106,15 +106,14 @@ namespace AppControleRestaurante
                 return;
             }
 
-            // Validação básica de e-mail
-            if (!TxbEmail.Text.Contains("@") || TxbEmail.Text.Contains("."))
-            {
-                MessageBox.Show("E-mail inválido!", "Erro");
-                return;
-            }
-
-            // Validação de senha (mínimo 6 caracteres)
-            if (TxbSenha.Text.Length < 6)
+                // Validação básica de e-mail
+                if (!TxbEmail.Text.Contains("@") || !TxbEmail.Text.Contains("."))
+                {
+                    MessageBox.Show("E-mail inválido!", "Erro");
+                    return;
+                }
+                // Validação de senha (mínimo 6 caracteres)
+                if (TxbSenha.Text.Length < 6)
             {
                 MessageBox.Show("A senha deve ter no mínimo 6 caracteres!", "Erro");
                 return;

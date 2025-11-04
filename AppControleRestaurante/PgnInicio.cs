@@ -23,6 +23,7 @@ namespace AppControleRestaurante
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace AppControleRestaurante
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -64,6 +66,7 @@ namespace AppControleRestaurante
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
+            this.Hide();
         }
     }
 }

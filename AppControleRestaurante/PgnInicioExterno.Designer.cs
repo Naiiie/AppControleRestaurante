@@ -45,6 +45,7 @@
             this.btnMensagens.Size = new System.Drawing.Size(93, 79);
             this.btnMensagens.TabIndex = 5;
             this.btnMensagens.UseVisualStyleBackColor = true;
+            this.btnMensagens.Click += new System.EventHandler(this.btnMensagens_Click);
             // 
             // btncatalogo
             // 
