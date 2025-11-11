@@ -36,6 +36,8 @@
             this.txbCustoP = new System.Windows.Forms.TextBox();
             this.txbValorP = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txbEstoqueP = new System.Windows.Forms.TextBox();
+            this.lblEstoque = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,11 +120,29 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txbEstoqueP
+            // 
+            this.txbEstoqueP.Location = new System.Drawing.Point(480, 332);
+            this.txbEstoqueP.Name = "txbEstoqueP";
+            this.txbEstoqueP.Size = new System.Drawing.Size(100, 20);
+            this.txbEstoqueP.TabIndex = 25;
+            // 
+            // lblEstoque
+            // 
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Location = new System.Drawing.Point(486, 296);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(101, 13);
+            this.lblEstoque.TabIndex = 26;
+            this.lblEstoque.Text = "quantidade estoque";
+            // 
             // CadCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.txbEstoqueP);
             this.Controls.Add(this.txbValorP);
             this.Controls.Add(this.txbCustoP);
             this.Controls.Add(this.txbDescricaoP);
@@ -149,5 +169,7 @@
         private System.Windows.Forms.TextBox txbDescricaoP;
         private System.Windows.Forms.TextBox txbCustoP;
         private System.Windows.Forms.TextBox txbValorP;
+        private System.Windows.Forms.TextBox txbEstoqueP;
+        private System.Windows.Forms.Label lblEstoque;
     }
 }

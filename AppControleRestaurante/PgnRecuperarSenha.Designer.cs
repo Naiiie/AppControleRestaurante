@@ -73,7 +73,7 @@
             this.pnlRedefinirSenha.Controls.Add(this.txbNovaSenha);
             this.pnlRedefinirSenha.Controls.Add(this.txbToken);
             this.pnlRedefinirSenha.Controls.Add(this.lblToken);
-            this.pnlRedefinirSenha.Location = new System.Drawing.Point(377, 71);
+            this.pnlRedefinirSenha.Location = new System.Drawing.Point(200, 120);
             this.pnlRedefinirSenha.Name = "pnlRedefinirSenha";
             this.pnlRedefinirSenha.Size = new System.Drawing.Size(368, 168);
             this.pnlRedefinirSenha.TabIndex = 3;

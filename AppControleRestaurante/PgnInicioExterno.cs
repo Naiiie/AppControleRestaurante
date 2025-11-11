@@ -29,6 +29,15 @@ namespace AppControleRestaurante
         {
 
         }
+
+        private void btnLancaPedido_Click(object sender, EventArgs e)
+        {
+
+            FrmLancarPedido product = new FrmLancarPedido();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
+        }
     }
     }
 

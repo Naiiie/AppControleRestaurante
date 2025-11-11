@@ -32,6 +32,7 @@
             this.btnMensagens = new System.Windows.Forms.Button();
             this.btncatalogo = new System.Windows.Forms.Button();
             this.pictureIn2 = new System.Windows.Forms.PictureBox();
+            this.btnLancaPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIn2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,18 +67,29 @@
             // pictureIn2
             // 
             this.pictureIn2.Image = ((System.Drawing.Image)(resources.GetObject("pictureIn2.Image")));
-            this.pictureIn2.Location = new System.Drawing.Point(1, 12);
+            this.pictureIn2.Location = new System.Drawing.Point(-1, 0);
             this.pictureIn2.Name = "pictureIn2";
-            this.pictureIn2.Size = new System.Drawing.Size(800, 467);
+            this.pictureIn2.Size = new System.Drawing.Size(804, 450);
             this.pictureIn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureIn2.TabIndex = 0;
             this.pictureIn2.TabStop = false;
+            // 
+            // btnLancaPedido
+            // 
+            this.btnLancaPedido.Location = new System.Drawing.Point(657, 212);
+            this.btnLancaPedido.Name = "btnLancaPedido";
+            this.btnLancaPedido.Size = new System.Drawing.Size(130, 23);
+            this.btnLancaPedido.TabIndex = 6;
+            this.btnLancaPedido.Text = "Lancar pedido";
+            this.btnLancaPedido.UseVisualStyleBackColor = true;
+            this.btnLancaPedido.Click += new System.EventHandler(this.btnLancaPedido_Click);
             // 
             // PgnInicioExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLancaPedido);
             this.Controls.Add(this.btnMensagens);
             this.Controls.Add(this.btncatalogo);
             this.Controls.Add(this.pictureIn2);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.PictureBox pictureIn2;
         private System.Windows.Forms.Button btncatalogo;
         private System.Windows.Forms.Button btnMensagens;
+        private System.Windows.Forms.Button btnLancaPedido;
     }
 }
