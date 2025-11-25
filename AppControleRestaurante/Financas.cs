@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace AppControleRestaurante
 {
     public partial class Financas : Form
     {
-        private readonly string connectionString = "Server=.\\sqlexpress;Database=RestauranteDB;User Id=aluno;Password=aluno";
+        private readonly string connectionString = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
 
         public Financas ()
         {
@@ -25,7 +26,13 @@ namespace AppControleRestaurante
 
         private void CarregarRelatorio()
         {
-            int empresaId = Sessao.EmpresaId; // ajuste se necessário
+            int empresaId = Sessao.EmpresaId;
+            if (empresaId <= 0)
+            {
+                MessageBox.Show("ERRO: EmpresaId não carregado.");
+                return;
+            }
+
             DateTime inicio = dtInicio.Value.Date;
             DateTime fim = dtFim.Value.Date.AddDays(1).AddTicks(-1);
 
@@ -36,36 +43,39 @@ namespace AppControleRestaurante
                 conn.Open();
 
                 string sql = @"
-                    SELECT Id AS IdPedido, DataPedido, Total
-                    FROM Pedidos
-                    WHERE EmpresaId = @EmpresaId
-                      AND DataPedido BETWEEN @Inicio AND @Fim
-                    ORDER BY DataPedido DESC";
+            SELECT IdPedido, DataPedido, Total
+            FROM Pedidos
+            WHERE EmpresaId = @EmpresaId
+              AND DataPedido BETWEEN @Inicio AND @Fim
+            ORDER BY DataPedido DESC";
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@EmpresaId", empresaId);
-                    cmd.Parameters.AddWithValue("@Inicio", inicio);
-                    cmd.Parameters.AddWithValue("@Fim", fim);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@EmpresaId", empresaId);
+                cmd.Parameters.AddWithValue("@Inicio", inicio);
+                cmd.Parameters.AddWithValue("@Fim", fim);
 
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                    {
-                        da.Fill(dt);
-                    }
-                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
             }
 
-            dgvVendas.DataSource = dt;
+            dgvItens.DataSource = dt;
 
-            // Calcula total período
-            decimal totalPeriodo = 0m;
-            foreach (DataRow r in dt.Rows)
-            {
-                if (r["Total"] != DBNull.Value)
-                    totalPeriodo += Convert.ToDecimal(r["Total"]);
-            }
+            decimal totalPeriodo = dt.AsEnumerable()
+                                     .Where(r => r["Total"] != DBNull.Value)
+                                     .Sum(r => Convert.ToDecimal(r["Total"]));
 
             lblTotalPeriodo.Text = $"Total no período: R$ {totalPeriodo:N2}";
+        }
+
+
+        private void Financas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvItens_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
