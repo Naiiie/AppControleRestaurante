@@ -35,9 +35,8 @@
             this.txbDescricaoP = new System.Windows.Forms.TextBox();
             this.txbCustoP = new System.Windows.Forms.TextBox();
             this.txbValorP = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txbEstoqueP = new System.Windows.Forms.TextBox();
-            this.lblEstoque = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +46,7 @@
             this.CmbAtividadeP.Items.AddRange(new object[] {
             "(1) ATIVO",
             "(2) INATIVO"});
-            this.CmbAtividadeP.Location = new System.Drawing.Point(458, 145);
+            this.CmbAtividadeP.Location = new System.Drawing.Point(464, 253);
             this.CmbAtividadeP.Name = "CmbAtividadeP";
             this.CmbAtividadeP.Size = new System.Drawing.Size(246, 21);
             this.CmbAtividadeP.TabIndex = 14;
@@ -59,9 +58,9 @@
             this.btnSalvarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarP.Font = new System.Drawing.Font("Noto Sans Georgian", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarP.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvarP.Location = new System.Drawing.Point(556, 367);
+            this.btnSalvarP.Location = new System.Drawing.Point(545, 383);
             this.btnSalvarP.Name = "btnSalvarP";
-            this.btnSalvarP.Size = new System.Drawing.Size(200, 57);
+            this.btnSalvarP.Size = new System.Drawing.Size(200, 55);
             this.btnSalvarP.TabIndex = 17;
             this.btnSalvarP.Text = "Salvar Produto";
             this.btnSalvarP.UseVisualStyleBackColor = false;
@@ -76,7 +75,7 @@
             "(3) Pratos",
             "(4) Sobremesas",
             "(5)Outros"});
-            this.cmbCategoriaP.Location = new System.Drawing.Point(458, 254);
+            this.cmbCategoriaP.Location = new System.Drawing.Point(464, 152);
             this.cmbCategoriaP.Name = "cmbCategoriaP";
             this.cmbCategoriaP.Size = new System.Drawing.Size(246, 21);
             this.cmbCategoriaP.TabIndex = 18;
@@ -110,9 +109,16 @@
             this.txbValorP.Size = new System.Drawing.Size(201, 20);
             this.txbValorP.TabIndex = 24;
             // 
+            // txbEstoqueP
+            // 
+            this.txbEstoqueP.Location = new System.Drawing.Point(455, 347);
+            this.txbEstoqueP.Name = "txbEstoqueP";
+            this.txbEstoqueP.Size = new System.Drawing.Size(141, 20);
+            this.txbEstoqueP.TabIndex = 25;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_155309;
+            this.pictureBox1.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_01_153945;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-20, -5);
             this.pictureBox1.Name = "pictureBox1";
@@ -120,28 +126,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txbEstoqueP
-            // 
-            this.txbEstoqueP.Location = new System.Drawing.Point(480, 332);
-            this.txbEstoqueP.Name = "txbEstoqueP";
-            this.txbEstoqueP.Size = new System.Drawing.Size(100, 20);
-            this.txbEstoqueP.TabIndex = 25;
-            // 
-            // lblEstoque
-            // 
-            this.lblEstoque.AutoSize = true;
-            this.lblEstoque.Location = new System.Drawing.Point(486, 296);
-            this.lblEstoque.Name = "lblEstoque";
-            this.lblEstoque.Size = new System.Drawing.Size(101, 13);
-            this.lblEstoque.TabIndex = 26;
-            this.lblEstoque.Text = "quantidade estoque";
-            // 
             // CadCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.txbEstoqueP);
             this.Controls.Add(this.txbValorP);
             this.Controls.Add(this.txbCustoP);
@@ -170,6 +159,5 @@
         private System.Windows.Forms.TextBox txbCustoP;
         private System.Windows.Forms.TextBox txbValorP;
         private System.Windows.Forms.TextBox txbEstoqueP;
-        private System.Windows.Forms.Label lblEstoque;
     }
 }

@@ -207,5 +207,10 @@ Sistema de Controle de Restaurante";
         {
 
         }
+
+        private void txbUsuarioRec_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }

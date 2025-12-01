@@ -130,5 +130,10 @@ namespace AppControleRestaurante
         {
 
         }
+
+        private void lblEstoque_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

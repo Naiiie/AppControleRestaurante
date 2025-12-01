@@ -30,7 +30,6 @@
         {
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txbUsuarioRec = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlRedefinirSenha = new System.Windows.Forms.Panel();
             this.btnRedefinir = new System.Windows.Forms.Button();
             this.lblNovaSenha = new System.Windows.Forms.Label();
@@ -42,38 +41,37 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(66, 343);
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEnviar.Font = new System.Drawing.Font("Noto Serif Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.Black;
+            this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviar.Location = new System.Drawing.Point(83, 344);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(209, 23);
+            this.btnEnviar.Size = new System.Drawing.Size(278, 49);
             this.btnEnviar.TabIndex = 0;
             this.btnEnviar.Text = "Enviar código de redefinição";
-            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // txbUsuarioRec
             // 
-            this.txbUsuarioRec.Location = new System.Drawing.Point(66, 219);
+            this.txbUsuarioRec.Location = new System.Drawing.Point(34, 131);
             this.txbUsuarioRec.Name = "txbUsuarioRec";
-            this.txbUsuarioRec.Size = new System.Drawing.Size(191, 20);
+            this.txbUsuarioRec.Size = new System.Drawing.Size(263, 20);
             this.txbUsuarioRec.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(27, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "insira seu usuario para recuperação";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txbUsuarioRec.TextChanged += new System.EventHandler(this.txbUsuarioRec_TextChanged);
             // 
             // pnlRedefinirSenha
             // 
+            this.pnlRedefinirSenha.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlRedefinirSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRedefinirSenha.Controls.Add(this.btnRedefinir);
             this.pnlRedefinirSenha.Controls.Add(this.lblNovaSenha);
             this.pnlRedefinirSenha.Controls.Add(this.txbNovaSenha);
             this.pnlRedefinirSenha.Controls.Add(this.txbToken);
             this.pnlRedefinirSenha.Controls.Add(this.lblToken);
-            this.pnlRedefinirSenha.Location = new System.Drawing.Point(200, 120);
+            this.pnlRedefinirSenha.Location = new System.Drawing.Point(272, 157);
             this.pnlRedefinirSenha.Name = "pnlRedefinirSenha";
             this.pnlRedefinirSenha.Size = new System.Drawing.Size(368, 168);
             this.pnlRedefinirSenha.TabIndex = 3;
@@ -82,7 +80,8 @@
             // 
             // btnRedefinir
             // 
-            this.btnRedefinir.Location = new System.Drawing.Point(235, 142);
+            this.btnRedefinir.Font = new System.Drawing.Font("Noto Serif Georgian", 9.749998F, System.Drawing.FontStyle.Bold);
+            this.btnRedefinir.Location = new System.Drawing.Point(222, 133);
             this.btnRedefinir.Name = "btnRedefinir";
             this.btnRedefinir.Size = new System.Drawing.Size(133, 23);
             this.btnRedefinir.TabIndex = 4;
@@ -93,9 +92,10 @@
             // lblNovaSenha
             // 
             this.lblNovaSenha.AutoSize = true;
-            this.lblNovaSenha.Location = new System.Drawing.Point(240, 59);
+            this.lblNovaSenha.Font = new System.Drawing.Font("Noto Serif Georgian", 9.749998F, System.Drawing.FontStyle.Bold);
+            this.lblNovaSenha.Location = new System.Drawing.Point(240, 54);
             this.lblNovaSenha.Name = "lblNovaSenha";
-            this.lblNovaSenha.Size = new System.Drawing.Size(67, 13);
+            this.lblNovaSenha.Size = new System.Drawing.Size(86, 18);
             this.lblNovaSenha.TabIndex = 3;
             this.lblNovaSenha.Text = "Nova Senha";
             // 
@@ -111,15 +111,16 @@
             // 
             this.txbToken.Location = new System.Drawing.Point(19, 49);
             this.txbToken.Name = "txbToken";
-            this.txbToken.Size = new System.Drawing.Size(100, 20);
+            this.txbToken.Size = new System.Drawing.Size(176, 20);
             this.txbToken.TabIndex = 1;
             // 
             // lblToken
             // 
             this.lblToken.AutoSize = true;
-            this.lblToken.Location = new System.Drawing.Point(16, 33);
+            this.lblToken.Font = new System.Drawing.Font("Noto Serif Georgian", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToken.Location = new System.Drawing.Point(16, 24);
             this.lblToken.Name = "lblToken";
-            this.lblToken.Size = new System.Drawing.Size(130, 13);
+            this.lblToken.Size = new System.Drawing.Size(179, 18);
             this.lblToken.TabIndex = 0;
             this.lblToken.Text = "Token recebido por e-mail";
             // 
@@ -127,11 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_01_154806;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlRedefinirSenha);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txbUsuarioRec);
             this.Controls.Add(this.btnEnviar);
+            this.DoubleBuffered = true;
             this.Name = "PgnRecuperarSenha";
             this.Text = "PgnRecuperarSenha";
             this.pnlRedefinirSenha.ResumeLayout(false);
@@ -145,7 +148,6 @@
 
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txbUsuarioRec;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlRedefinirSenha;
         private System.Windows.Forms.TextBox txbToken;
         private System.Windows.Forms.Label lblToken;

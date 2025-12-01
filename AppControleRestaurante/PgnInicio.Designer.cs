@@ -40,9 +40,9 @@
             this.BtnCadEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadEmpresa.Font = new System.Drawing.Font("Noto Serif Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCadEmpresa.ForeColor = System.Drawing.Color.Black;
-            this.BtnCadEmpresa.Location = new System.Drawing.Point(28, 133);
+            this.BtnCadEmpresa.Location = new System.Drawing.Point(33, 120);
             this.BtnCadEmpresa.Name = "BtnCadEmpresa";
-            this.BtnCadEmpresa.Size = new System.Drawing.Size(196, 47);
+            this.BtnCadEmpresa.Size = new System.Drawing.Size(205, 47);
             this.BtnCadEmpresa.TabIndex = 1;
             this.BtnCadEmpresa.Text = "Cadastro da Empresa";
             this.BtnCadEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -57,9 +57,9 @@
             this.BtnCadExterno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadExterno.Font = new System.Drawing.Font("Noto Serif Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCadExterno.ForeColor = System.Drawing.Color.Black;
-            this.BtnCadExterno.Location = new System.Drawing.Point(270, 133);
+            this.BtnCadExterno.Location = new System.Drawing.Point(312, 120);
             this.BtnCadExterno.Name = "BtnCadExterno";
-            this.BtnCadExterno.Size = new System.Drawing.Size(196, 47);
+            this.BtnCadExterno.Size = new System.Drawing.Size(212, 47);
             this.BtnCadExterno.TabIndex = 8;
             this.BtnCadExterno.Text = "Cadastro Externo";
             this.BtnCadExterno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -74,7 +74,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Noto Serif Georgian", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(540, 366);
+            this.btnLogin.Location = new System.Drawing.Point(527, 385);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(222, 54);
             this.btnLogin.TabIndex = 9;
@@ -88,9 +88,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_14_123419;
+            this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_01_160415;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(783, 461);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.BtnCadExterno);
             this.Controls.Add(this.BtnCadEmpresa);

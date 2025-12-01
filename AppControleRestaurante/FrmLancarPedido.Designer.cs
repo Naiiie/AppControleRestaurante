@@ -42,38 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblPesquisa
-            // 
-            this.lblPesquisa.AutoSize = true;
-            this.lblPesquisa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblPesquisa.Location = new System.Drawing.Point(26, 22);
-            this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(67, 19);
-            this.lblPesquisa.TabIndex = 0;
-            this.lblPesquisa.Text = "Pesquisar:";
-            // 
-            // txbPesquisaCatalogo
-            // 
-            this.txbPesquisaCatalogo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txbPesquisaCatalogo.Location = new System.Drawing.Point(99, 19);
-            this.txbPesquisaCatalogo.Name = "txbPesquisaCatalogo";
-            this.txbPesquisaCatalogo.Size = new System.Drawing.Size(200, 25);
-            this.txbPesquisaCatalogo.TabIndex = 1;
-            // 
-            // btnPesquisarP
-            // 
-            this.btnPesquisarP.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPesquisarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisarP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnPesquisarP.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarP.Location = new System.Drawing.Point(305, 19);
-            this.btnPesquisarP.Name = "btnPesquisarP";
-            this.btnPesquisarP.Size = new System.Drawing.Size(90, 25);
-            this.btnPesquisarP.TabIndex = 2;
-            this.btnPesquisarP.Text = "Buscar";
-            this.btnPesquisarP.UseVisualStyleBackColor = false;
-            this.btnPesquisarP.Click += new System.EventHandler(this.btnPesquisarP_Click);
-            // 
             // lblProduto
             // 
             this.lblProduto.AutoSize = true;
@@ -108,11 +76,19 @@
             // 
             this.numQuantidade.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.numQuantidade.Location = new System.Drawing.Point(116, 93);
-            this.numQuantidade.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numQuantidade.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numQuantidade.Name = "numQuantidade";
             this.numQuantidade.Size = new System.Drawing.Size(69, 25);
             this.numQuantidade.TabIndex = 6;
-            this.numQuantidade.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numQuantidade.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnAdicionarItem
             // 
@@ -143,10 +119,10 @@
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(171)))), ((int)(((byte)(165)))));
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnFinalizar.ForeColor = System.Drawing.Color.White;
+            this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
             this.btnFinalizar.Location = new System.Drawing.Point(305, 321);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(154, 30);
@@ -166,10 +142,43 @@
             this.lblTotal.TabIndex = 10;
             this.lblTotal.Text = "Total: R$ 0";
             // 
+            // lblPesquisa
+            // 
+            this.lblPesquisa.AutoSize = true;
+            this.lblPesquisa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblPesquisa.Location = new System.Drawing.Point(26, 22);
+            this.lblPesquisa.Name = "lblPesquisa";
+            this.lblPesquisa.Size = new System.Drawing.Size(69, 19);
+            this.lblPesquisa.TabIndex = 0;
+            this.lblPesquisa.Text = "Pesquisar:";
+            // 
+            // txbPesquisaCatalogo
+            // 
+            this.txbPesquisaCatalogo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txbPesquisaCatalogo.Location = new System.Drawing.Point(99, 19);
+            this.txbPesquisaCatalogo.Name = "txbPesquisaCatalogo";
+            this.txbPesquisaCatalogo.Size = new System.Drawing.Size(200, 25);
+            this.txbPesquisaCatalogo.TabIndex = 1;
+            // 
+            // btnPesquisarP
+            // 
+            this.btnPesquisarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(171)))), ((int)(((byte)(165)))));
+            this.btnPesquisarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisarP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnPesquisarP.ForeColor = System.Drawing.Color.Black;
+            this.btnPesquisarP.Location = new System.Drawing.Point(305, 19);
+            this.btnPesquisarP.Name = "btnPesquisarP";
+            this.btnPesquisarP.Size = new System.Drawing.Size(90, 25);
+            this.btnPesquisarP.TabIndex = 2;
+            this.btnPesquisarP.Text = "Buscar";
+            this.btnPesquisarP.UseVisualStyleBackColor = false;
+            this.btnPesquisarP.Click += new System.EventHandler(this.btnPesquisarP_Click);
+            // 
             // FrmLancarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(663, 395);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnFinalizar);
@@ -191,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
 

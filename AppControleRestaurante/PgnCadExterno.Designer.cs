@@ -29,25 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnCadExterno));
-            this.pictureLog2 = new System.Windows.Forms.PictureBox();
             this.txbUsuario2 = new System.Windows.Forms.TextBox();
             this.txbSenha2 = new System.Windows.Forms.TextBox();
             this.txbNomeFuncionario = new System.Windows.Forms.TextBox();
             this.txbID = new System.Windows.Forms.TextBox();
             this.btnSalvar2 = new System.Windows.Forms.Button();
             this.txbEmailFuncionario = new System.Windows.Forms.TextBox();
+            this.pictureLog2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLog2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureLog2
-            // 
-            this.pictureLog2.Image = ((System.Drawing.Image)(resources.GetObject("pictureLog2.Image")));
-            this.pictureLog2.Location = new System.Drawing.Point(-2, -3);
-            this.pictureLog2.Name = "pictureLog2";
-            this.pictureLog2.Size = new System.Drawing.Size(800, 452);
-            this.pictureLog2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureLog2.TabIndex = 0;
-            this.pictureLog2.TabStop = false;
             // 
             // txbUsuario2
             // 
@@ -60,6 +50,7 @@
             // 
             this.txbSenha2.Location = new System.Drawing.Point(496, 281);
             this.txbSenha2.Name = "txbSenha2";
+            this.txbSenha2.PasswordChar = '*';
             this.txbSenha2.Size = new System.Drawing.Size(165, 20);
             this.txbSenha2.TabIndex = 8;
             // 
@@ -101,6 +92,16 @@
             this.txbEmailFuncionario.Name = "txbEmailFuncionario";
             this.txbEmailFuncionario.Size = new System.Drawing.Size(201, 20);
             this.txbEmailFuncionario.TabIndex = 14;
+            // 
+            // pictureLog2
+            // 
+            this.pictureLog2.Image = ((System.Drawing.Image)(resources.GetObject("pictureLog2.Image")));
+            this.pictureLog2.Location = new System.Drawing.Point(-2, -3);
+            this.pictureLog2.Name = "pictureLog2";
+            this.pictureLog2.Size = new System.Drawing.Size(800, 452);
+            this.pictureLog2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLog2.TabIndex = 0;
+            this.pictureLog2.TabStop = false;
             // 
             // PgnCadExterno
             // 

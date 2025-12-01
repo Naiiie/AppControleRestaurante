@@ -31,7 +31,6 @@
             this.btnFinanças = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFinanças
@@ -69,16 +68,6 @@
             this.btnFuncionarios.TabIndex = 6;
             this.btnFuncionarios.UseVisualStyleBackColor = true;
             // 
-            // btnUsers
-            // 
-            this.btnUsers.Location = new System.Drawing.Point(63, 176);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(75, 23);
-            this.btnUsers.TabIndex = 7;
-            this.btnUsers.Text = "funcionarios";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click_1);
-            // 
             // PgnInicioEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,7 +75,6 @@
             this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_141450;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnFuncionarios);
             this.Controls.Add(this.btnCatalogo);
             this.Controls.Add(this.btnFinanças);
@@ -101,6 +89,5 @@
         private System.Windows.Forms.Button btnFinanças;
         private System.Windows.Forms.Button btnCatalogo;
         private System.Windows.Forms.Button btnFuncionarios;
-        private System.Windows.Forms.Button btnUsers;
     }
 }

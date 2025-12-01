@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PgnInicioExterno));
-            this.btnMensagens = new System.Windows.Forms.Button();
+            this.btnLancaPedido = new System.Windows.Forms.Button();
             this.btncatalogo = new System.Windows.Forms.Button();
             this.pictureIn2 = new System.Windows.Forms.PictureBox();
-            this.btnLancaPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIn2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnMensagens
+            // btnLancaPedido
             // 
-            this.btnMensagens.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_161901;
-            this.btnMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMensagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(206)))), ((int)(((byte)(198)))));
-            this.btnMensagens.Location = new System.Drawing.Point(666, 83);
-            this.btnMensagens.Name = "btnMensagens";
-            this.btnMensagens.Size = new System.Drawing.Size(93, 79);
-            this.btnMensagens.TabIndex = 5;
-            this.btnMensagens.UseVisualStyleBackColor = true;
-            this.btnMensagens.Click += new System.EventHandler(this.btnMensagens_Click);
+            this.btnLancaPedido.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_01_162513;
+            this.btnLancaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLancaPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnLancaPedido.Location = new System.Drawing.Point(695, 97);
+            this.btnLancaPedido.Name = "btnLancaPedido";
+            this.btnLancaPedido.Size = new System.Drawing.Size(60, 67);
+            this.btnLancaPedido.TabIndex = 6;
+            this.btnLancaPedido.UseVisualStyleBackColor = true;
+            this.btnLancaPedido.Click += new System.EventHandler(this.btnLancaPedido_Click);
             // 
             // btncatalogo
             // 
@@ -74,23 +73,12 @@
             this.pictureIn2.TabIndex = 0;
             this.pictureIn2.TabStop = false;
             // 
-            // btnLancaPedido
-            // 
-            this.btnLancaPedido.Location = new System.Drawing.Point(657, 212);
-            this.btnLancaPedido.Name = "btnLancaPedido";
-            this.btnLancaPedido.Size = new System.Drawing.Size(130, 23);
-            this.btnLancaPedido.TabIndex = 6;
-            this.btnLancaPedido.Text = "Lancar pedido";
-            this.btnLancaPedido.UseVisualStyleBackColor = true;
-            this.btnLancaPedido.Click += new System.EventHandler(this.btnLancaPedido_Click);
-            // 
             // PgnInicioExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLancaPedido);
-            this.Controls.Add(this.btnMensagens);
             this.Controls.Add(this.btncatalogo);
             this.Controls.Add(this.pictureIn2);
             this.Name = "PgnInicioExterno";
@@ -104,7 +92,6 @@
 
         private System.Windows.Forms.PictureBox pictureIn2;
         private System.Windows.Forms.Button btncatalogo;
-        private System.Windows.Forms.Button btnMensagens;
         private System.Windows.Forms.Button btnLancaPedido;
     }
 }

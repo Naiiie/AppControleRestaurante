@@ -34,6 +34,8 @@
             // dgvItens
             // 
             this.dgvItens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItens.BackgroundColor = System.Drawing.Color.White;
+            this.dgvItens.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvItens.Location = new System.Drawing.Point(16, 75);
             this.dgvItens.Name = "dgvItens";
             this.dgvItens.ReadOnly = true;
@@ -107,6 +109,7 @@
             // 
             // Financas
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(640, 420);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblDe);
