@@ -19,10 +19,11 @@ namespace AppControleRestaurante
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
-        { 
-            Catalogo catalogo = new Catalogo;
-            catalogo.Show();
-            this.Hide(); // Esconde o form atual (opcional)
+        {
+         Catalogo product = new Catalogo();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
         }
         
 
