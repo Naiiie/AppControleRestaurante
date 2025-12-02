@@ -37,6 +37,7 @@
             this.txbValorP = new System.Windows.Forms.TextBox();
             this.txbEstoqueP = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnVoltarCat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,9 +91,8 @@
             // txbDescricaoP
             // 
             this.txbDescricaoP.Location = new System.Drawing.Point(26, 170);
-            this.txbDescricaoP.Multiline = true;
             this.txbDescricaoP.Name = "txbDescricaoP";
-            this.txbDescricaoP.Size = new System.Drawing.Size(201, 54);
+            this.txbDescricaoP.Size = new System.Drawing.Size(201, 20);
             this.txbDescricaoP.TabIndex = 22;
             // 
             // txbCustoP
@@ -125,12 +125,26 @@
             this.pictureBox1.Size = new System.Drawing.Size(842, 458);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnVoltarCat
+            // 
+            this.btnVoltarCat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnVoltarCat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltarCat.Location = new System.Drawing.Point(688, 23);
+            this.btnVoltarCat.Name = "btnVoltarCat";
+            this.btnVoltarCat.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltarCat.TabIndex = 26;
+            this.btnVoltarCat.Text = "Voltar";
+            this.btnVoltarCat.UseVisualStyleBackColor = false;
+            this.btnVoltarCat.Click += new System.EventHandler(this.btnVoltarCat_Click);
             // 
             // CadCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltarCat);
             this.Controls.Add(this.txbEstoqueP);
             this.Controls.Add(this.txbValorP);
             this.Controls.Add(this.txbCustoP);
@@ -159,5 +173,6 @@
         private System.Windows.Forms.TextBox txbCustoP;
         private System.Windows.Forms.TextBox txbValorP;
         private System.Windows.Forms.TextBox txbEstoqueP;
+        private System.Windows.Forms.Button btnVoltarCat;
     }
 }

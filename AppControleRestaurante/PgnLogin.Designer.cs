@@ -32,6 +32,7 @@
             this.txbLogSenha = new System.Windows.Forms.TextBox();
             this.btnLogEntrar = new System.Windows.Forms.Button();
             this.btnEsqueciSenha = new System.Windows.Forms.Button();
+            this.btnVoltar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbLogUsuario
@@ -73,6 +74,19 @@
             this.btnEsqueciSenha.UseVisualStyleBackColor = true;
             this.btnEsqueciSenha.Click += new System.EventHandler(this.btnEsqueciSenha_Click_1);
             // 
+            // btnVoltar2
+            // 
+            this.btnVoltar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnVoltar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltar2.Font = new System.Drawing.Font("Noto Sans Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar2.Location = new System.Drawing.Point(700, 30);
+            this.btnVoltar2.Name = "btnVoltar2";
+            this.btnVoltar2.Size = new System.Drawing.Size(75, 38);
+            this.btnVoltar2.TabIndex = 6;
+            this.btnVoltar2.Text = "Voltar";
+            this.btnVoltar2.UseVisualStyleBackColor = false;
+            this.btnVoltar2.Click += new System.EventHandler(this.btnVoltar2_Click);
+            // 
             // PgnLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +94,7 @@
             this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_11_04_0759402;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltar2);
             this.Controls.Add(this.btnEsqueciSenha);
             this.Controls.Add(this.btnLogEntrar);
             this.Controls.Add(this.txbLogSenha);
@@ -99,5 +114,6 @@
         private System.Windows.Forms.TextBox txbLogSenha;
         private System.Windows.Forms.Button btnLogEntrar;
         private System.Windows.Forms.Button btnEsqueciSenha;
+        private System.Windows.Forms.Button btnVoltar2;
     }
 }

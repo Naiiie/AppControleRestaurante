@@ -68,7 +68,7 @@ namespace AppControleRestaurante
                 return;
             }
 
-         
+
             // 🔹 String de conexão
             string conexao = "Server=sqlexpress;Database=CJ3027473PR2;User Id=aluno;Password=aluno";
 
@@ -109,12 +109,14 @@ namespace AppControleRestaurante
                     {
                         MessageBox.Show("Erro ao salvar: " + ex.Message);
                     }
-                }
             }
-            Catalogo product = new Catalogo();
+
+        }
+        Catalogo product = new Catalogo();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
+            this.Close();
         }
 
 
@@ -134,6 +136,28 @@ namespace AppControleRestaurante
         private void lblEstoque_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltarCat_Click(object sender, EventArgs e)
+        {
+            {
+                {
+                    DialogResult resultado = MessageBox.Show(
+                        "Deseja voltar para pagina de catalogo?",
+                        "Confirmar",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+                }
+            }
+           Catalogo tela = new Catalogo();
+            this.Hide();
+            tela.ShowDialog();
+            this.Close();
         }
     }
 }

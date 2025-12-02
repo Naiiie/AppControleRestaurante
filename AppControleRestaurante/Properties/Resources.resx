@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Captura de tela 2025-10-14 125033" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-10-14 125033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Captura de tela 2025-11-04 0759401" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-11-04 0759401.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de tela 2025-10-30 144825" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-10-30 144825.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Captura de tela 2025-11-04 0759402" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-11-04 0759402.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="Captura de tela 2025-12-01 160216" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-12-01 160216.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Captura de tela 2025-11-04 075940" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-11-04 075940.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Captura de tela 2025-10-30 161901" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-10-30 161901.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="Captura de tela 2025-10-30 142038" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-10-30 142038.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Captura de tela 2025-10-30 144953" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-10-30 144953.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Captura de tela 2025-10-30 1449531" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-10-30 1449531.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,17 +175,14 @@
   <data name="Captura de tela 2025-12-01 160415" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-12-01 160415.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de tela 2025-12-01 153605" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-12-01 153605.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de tela 2025-11-04 075940" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-11-04 075940.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de tela 2025-10-30 144825" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-10-30 144825.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Captura de tela 2025-10-30 142134" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-10-30 142134.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de tela 2025-10-30 144618" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-10-30 144618.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de tela 2025-12-01 162513" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-12-01 162513.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Captura de tela 2025-09-02 122027" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-09-02 122027.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,13 +190,13 @@
   <data name="Captura de tela 2025-12-01 154806" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2025-12-01 154806.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de tela 2025-10-14 125033" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-10-14 125033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de tela 2025-12-01 153605" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-12-01 153605.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de tela 2025-10-30 144953" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-10-30 144953.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de tela 2025-10-30 144618" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-10-30 144618.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de tela 2025-12-01 162513" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de tela 2025-12-01 162513.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de tela 2025-12-02 084713" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de tela 2025-12-02 084713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

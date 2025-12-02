@@ -36,6 +36,7 @@
             this.btnSalvar2 = new System.Windows.Forms.Button();
             this.txbEmailFuncionario = new System.Windows.Forms.TextBox();
             this.pictureLog2 = new System.Windows.Forms.PictureBox();
+            this.btnVoltar3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLog2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,11 +104,25 @@
             this.pictureLog2.TabIndex = 0;
             this.pictureLog2.TabStop = false;
             // 
+            // btnVoltar3
+            // 
+            this.btnVoltar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnVoltar3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltar3.Font = new System.Drawing.Font("Noto Sans Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar3.Location = new System.Drawing.Point(694, 31);
+            this.btnVoltar3.Name = "btnVoltar3";
+            this.btnVoltar3.Size = new System.Drawing.Size(75, 34);
+            this.btnVoltar3.TabIndex = 15;
+            this.btnVoltar3.Text = "Voltar";
+            this.btnVoltar3.UseVisualStyleBackColor = false;
+            this.btnVoltar3.Click += new System.EventHandler(this.btnVoltar3_Click);
+            // 
             // PgnCadExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltar3);
             this.Controls.Add(this.txbEmailFuncionario);
             this.Controls.Add(this.btnSalvar2);
             this.Controls.Add(this.txbID);
@@ -132,5 +147,6 @@
         private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.Button btnSalvar2;
         private System.Windows.Forms.TextBox txbEmailFuncionario;
+        private System.Windows.Forms.Button btnVoltar3;
     }
 }

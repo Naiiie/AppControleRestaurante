@@ -31,6 +31,7 @@
             this.btnFinanças = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnSair1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFinanças
@@ -68,6 +69,20 @@
             this.btnFuncionarios.TabIndex = 6;
             this.btnFuncionarios.UseVisualStyleBackColor = true;
             // 
+            // btnSair1
+            // 
+            this.btnSair1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnSair1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair1.Font = new System.Drawing.Font("Noto Sans Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair1.ForeColor = System.Drawing.Color.Black;
+            this.btnSair1.Location = new System.Drawing.Point(707, 24);
+            this.btnSair1.Name = "btnSair1";
+            this.btnSair1.Size = new System.Drawing.Size(59, 46);
+            this.btnSair1.TabIndex = 7;
+            this.btnSair1.Text = "Sair";
+            this.btnSair1.UseVisualStyleBackColor = false;
+            this.btnSair1.Click += new System.EventHandler(this.btnSair1_Click);
+            // 
             // PgnInicioEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -75,6 +90,7 @@
             this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_10_30_141450;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair1);
             this.Controls.Add(this.btnFuncionarios);
             this.Controls.Add(this.btnCatalogo);
             this.Controls.Add(this.btnFinanças);
@@ -89,5 +105,6 @@
         private System.Windows.Forms.Button btnFinanças;
         private System.Windows.Forms.Button btnCatalogo;
         private System.Windows.Forms.Button btnFuncionarios;
+        private System.Windows.Forms.Button btnSair1;
     }
 }

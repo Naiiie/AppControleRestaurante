@@ -212,5 +212,10 @@ Sistema de Controle de Restaurante";
         {
 
         }
+
+        private void PgnRecuperarSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }

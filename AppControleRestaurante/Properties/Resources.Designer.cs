@@ -319,5 +319,15 @@ namespace AppControleRestaurante.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_12_02_084713 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-12-02 084713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

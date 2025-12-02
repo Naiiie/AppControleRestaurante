@@ -156,6 +156,24 @@ namespace AppControleRestaurante
         {
 
         }
+
+        private void btnVoltar3_Click(object sender, EventArgs e)
+        {
+            {
+                {
+                    DialogResult resultado = MessageBox.Show(
+                        "Deseja voltar a pagina inicial?",
+                        "Confirmar",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+                }
+            }
+            PgnInicial tela = new PgnInicial();
+            this.Hide();
+            tela.ShowDialog();
+            this.Close();
+
+        }
     }
     }
 

@@ -19,12 +19,12 @@ namespace AppControleRestaurante
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
-        {
-            Catalogo product = new Catalogo();
-            this.Visible = false;
-            product.ShowDialog();
-            this.Visible = true;
+        { 
+            Catalogo catalogo = new Catalogo;
+            catalogo.Show();
+            this.Hide(); // Esconde o form atual (opcional)
         }
+        
 
         private void btnFinanças_Click(object sender, EventArgs e)
         {
@@ -41,10 +41,10 @@ namespace AppControleRestaurante
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-             pgnFuncionarios funcionarios = new pgnFuncionarios();
-             this.Visible = false;
-             funcionarios.ShowDialog();
-            
+            pgnFuncionarios funcionarios = new pgnFuncionarios();
+            this.Visible = false;
+            funcionarios.ShowDialog();
+
             this.Visible = true;
         }
 
@@ -56,6 +56,24 @@ namespace AppControleRestaurante
         private void btnUsers_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSair1_Click(object sender, EventArgs e)
+        {
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente sair?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            }
+            PgnInicial tela = new PgnInicial();
+            this.Hide();
+            tela.ShowDialog();
+            this.Close();
+
+            
         }
     }
 }

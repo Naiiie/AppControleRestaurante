@@ -68,6 +68,21 @@ namespace AppControleRestaurante
             this.Visible = true;
             this.Hide();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente sair?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
-}
+    }
+
 

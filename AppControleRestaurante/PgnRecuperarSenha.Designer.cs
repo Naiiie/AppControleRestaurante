@@ -137,6 +137,7 @@
             this.DoubleBuffered = true;
             this.Name = "PgnRecuperarSenha";
             this.Text = "PgnRecuperarSenha";
+            this.Load += new System.EventHandler(this.PgnRecuperarSenha_Load);
             this.pnlRedefinirSenha.ResumeLayout(false);
             this.pnlRedefinirSenha.PerformLayout();
             this.ResumeLayout(false);

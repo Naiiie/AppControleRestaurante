@@ -32,6 +32,7 @@
             this.btnLancaPedido = new System.Windows.Forms.Button();
             this.btncatalogo = new System.Windows.Forms.Button();
             this.pictureIn2 = new System.Windows.Forms.PictureBox();
+            this.btnSair3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIn2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +74,25 @@
             this.pictureIn2.TabIndex = 0;
             this.pictureIn2.TabStop = false;
             // 
+            // btnSair3
+            // 
+            this.btnSair3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnSair3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair3.Font = new System.Drawing.Font("Noto Sans Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair3.Location = new System.Drawing.Point(12, 22);
+            this.btnSair3.Name = "btnSair3";
+            this.btnSair3.Size = new System.Drawing.Size(75, 46);
+            this.btnSair3.TabIndex = 7;
+            this.btnSair3.Text = "Sair";
+            this.btnSair3.UseVisualStyleBackColor = false;
+            this.btnSair3.Click += new System.EventHandler(this.btnSair3_Click);
+            // 
             // PgnInicioExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair3);
             this.Controls.Add(this.btnLancaPedido);
             this.Controls.Add(this.btncatalogo);
             this.Controls.Add(this.pictureIn2);
@@ -93,5 +108,6 @@
         private System.Windows.Forms.PictureBox pictureIn2;
         private System.Windows.Forms.Button btncatalogo;
         private System.Windows.Forms.Button btnLancaPedido;
+        private System.Windows.Forms.Button btnSair3;
     }
 }

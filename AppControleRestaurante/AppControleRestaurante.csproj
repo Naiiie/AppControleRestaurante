@@ -334,5 +334,8 @@
   <ItemGroup>
     <None Include="Resources\Captura de tela 2025-12-01 162513.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2025-12-02 084713.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

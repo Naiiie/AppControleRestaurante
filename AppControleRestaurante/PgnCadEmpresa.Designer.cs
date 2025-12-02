@@ -38,6 +38,7 @@
             this.TxbSenha = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.pictureLog1 = new System.Windows.Forms.PictureBox();
+            this.btnvoltar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLog1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,11 +144,25 @@
             this.pictureLog1.TabStop = false;
             this.pictureLog1.Click += new System.EventHandler(this.pictureLog1_Click);
             // 
+            // btnvoltar1
+            // 
+            this.btnvoltar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnvoltar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnvoltar1.Font = new System.Drawing.Font("Noto Sans Georgian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvoltar1.Location = new System.Drawing.Point(713, 24);
+            this.btnvoltar1.Name = "btnvoltar1";
+            this.btnvoltar1.Size = new System.Drawing.Size(75, 30);
+            this.btnvoltar1.TabIndex = 22;
+            this.btnvoltar1.Text = "Voltar";
+            this.btnvoltar1.UseVisualStyleBackColor = false;
+            this.btnvoltar1.Click += new System.EventHandler(this.btnvoltar1_Click);
+            // 
             // PgnCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnvoltar1);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxbSenha);
             this.Controls.Add(this.TxbUsuario);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.PictureBox pictureLog1;
         public System.Windows.Forms.ComboBox CmbTamEmpresa;
+        private System.Windows.Forms.Button btnvoltar1;
     }
 }

@@ -31,6 +31,7 @@
             this.BtnCadEmpresa = new System.Windows.Forms.Button();
             this.BtnCadExterno = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnCadEmpresa
@@ -84,6 +85,18 @@
             this.btnLogin.UseWaitCursor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(207)))), ((int)(((byte)(200)))));
+            this.btnSair.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_02_084713;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Location = new System.Drawing.Point(703, 2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(68, 60);
+            this.btnSair.TabIndex = 10;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // PgnInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +104,7 @@
             this.BackgroundImage = global::AppControleRestaurante.Properties.Resources.Captura_de_tela_2025_12_01_160415;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(783, 461);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.BtnCadExterno);
             this.Controls.Add(this.BtnCadEmpresa);
@@ -106,6 +120,7 @@
         public System.Windows.Forms.Button BtnCadEmpresa;
         public System.Windows.Forms.Button BtnCadExterno;
         public System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 
